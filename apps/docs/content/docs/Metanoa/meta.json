@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "title": "Metanoa",
+  "description": "Metanoa documentation",
+  "icon": "Book",
+  "pages": ["index", "register-new-org", "create-fumadocs-app"]
+}
