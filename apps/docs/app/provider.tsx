@@ -1,6 +1,5 @@
 'use client';
 
-import { RootProvider } from 'fumadocs-ui/provider/base';
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
@@ -24,17 +23,15 @@ if (item === 'true') {
 }
 `;
 
+export const searchConfig = {
+  SearchDialog,
+};
+
 export function Provider({ children }: { children: ReactNode }) {
   return (
-    <RootProvider
-      search={{
-        SearchDialog,
-      }}
-    >
-      <TooltipProvider>
-        <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: inject }} />
-        {children}
-      </TooltipProvider>
-    </RootProvider>
+    <TooltipProvider>
+      <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: inject }} />
+      {children}
+    </TooltipProvider>
   );
 }

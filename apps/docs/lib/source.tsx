@@ -10,6 +10,7 @@ import { blog as blogPosts, docs } from 'fumadocs-mdx:collections/server';
 import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
 import { lucideIconsPlugin } from 'fumadocs-core/source/lucide-icons';
 import { openapi } from '@/lib/openapi';
+import { i18n } from '@/lib/i18n';
 
 export const source = loader(
   multiple({
@@ -20,6 +21,7 @@ export const source = loader(
   }),
   {
     baseUrl: '/docs',
+    i18n,
     plugins: [pageTreeCodeTitles(), lucideIconsPlugin(), openapiPlugin()],
   },
 );
@@ -49,6 +51,7 @@ function pageTreeCodeTitles(): LoaderPlugin {
 
 export const blog = loader(toFumadocsSource(blogPosts, []), {
   baseUrl: '/blog',
+  i18n,
 });
 
 export type Page = InferPageType<typeof source>;

@@ -29,7 +29,6 @@ import posthog from 'posthog-js';
 export default async function Page() {
   return (
     <DocsPage>
-      {/* at the bottom of page */}
       <Feedback
         onSendAction={async (feedback) => {
           'use server';

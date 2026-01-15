@@ -8,10 +8,15 @@ description: Support multiple languages in your documentation
 Fumadocs core provides necessary middleware and options for i18n support.
 
 You can define a config to share between utilities.
+```ts title="lib/i18n.ts"
+import { defineI18n } from 'fumadocs-core/i18n';
 
-<include cwd meta='title="lib/i18n.ts"'>
-  ../../examples/i18n/lib/i18n.ts
-</include>
+export const i18n = defineI18n({
+  defaultLanguage: 'en',
+  languages: ['en', 'de'],
+  hideLocale: 'default-locale',
+});
+```
 
 ### Hide Locale Prefix
 
@@ -63,9 +68,11 @@ export const i18n = defineI18n({
 ## Middleware
 
 Redirects users to appropriate locale, it can be customised from `i18n.ts`.
+```ts title="proxy.ts"
+import { createI18nMiddleware } from 'fumadocs-core/i18n/middleware';
+import { i18n } from '@/lib/i18n';
 
-<include cwd meta='title="proxy.ts"'>
-  ../../examples/i18n/proxy.ts
-</include>
+export default createI18nMiddleware(i18n);
+```
 
 > When `hideLocale` is enabled, it uses `NextResponse.rewrite` to hide locale prefixes.

@@ -30,17 +30,6 @@ Add the following to your Tailwind CSS file:
 ### Create Pages
 
 Create the following routes:
-
-<include cwd meta='tab="lib/layout.shared.tsx"'>
-  ../../examples/tanstack-start/src/lib/layout.shared.tsx
-</include>
-<include cwd meta='tab="routes/docs/$.tsx"'>
-  ../../examples/tanstack-start/src/routes/docs/$.tsx
-</include>
-<include cwd meta='tab="routes/api/search.ts"'>
-  ../../examples/tanstack-start/src/routes/api/search.ts
-</include>
-
 Wrap your entire app under Fumadocs providers:
 
 ```tsx title="__root.tsx"
@@ -67,7 +56,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="flex flex-col min-h-screen">
-        {/* [!code ++] */}
         <RootProvider>{children}</RootProvider>
         <Scripts />
       </body>

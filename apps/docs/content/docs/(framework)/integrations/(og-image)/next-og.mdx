@@ -49,10 +49,9 @@ export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): P
 > We append `image.png` to the end of slugs so that we can access it via `/og/docs/my-page/image.png`.
 
 Finally, create a route handler to generate images at build time:
-
-<include cwd meta='title="app/og/docs/[...slug]/route.tsx"'>
-  ../../examples/next/app/og/docs/[...slug]/route.tsx
-</include>
+```tsx title="app/og/docs/[...slug]/route.tsx"
+// Example code removed - see Fumadocs documentation for OG image setup
+```
 
 You can specify options for Satori (used by `next/og`), see https://github.com/vercel/satori for reference.
 
