@@ -85,7 +85,7 @@ export default async function Page(props: PageProps<'/[lang]/docs/[[...slug]]'>)
             a: ({ href, ...props }) => {
               const found = source.getPageByHref(href ?? '', {
                 dir: PathUtils.dirname(page.path),
-                locale: params.lang,
+                language: params.lang,
               });
 
               if (!found) return <Link href={href} {...props} />;

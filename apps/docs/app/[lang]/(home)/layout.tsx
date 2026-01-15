@@ -103,7 +103,7 @@ export default async function Layout({
         },
         ...linkItems.map((item) => ({
           ...item,
-          url: item.url ? `/${lang}${item.url}` : item.url,
+          ...('url' in item && item.url ? { url: `/${lang}${item.url}` } : {}),
         })),
       ]}
       className="dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)] [--color-fd-primary:var(--color-brand)]"

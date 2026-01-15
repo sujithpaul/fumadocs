@@ -74,7 +74,7 @@ export function createI18nMiddleware({
     formatter = format;
   }
 
-  return (request) => {
+  return (request, _event) => {
     const url = request.nextUrl;
     let pathLocale = formatter.get(url);
     if (pathLocale && !languages.includes(pathLocale)) pathLocale = undefined;

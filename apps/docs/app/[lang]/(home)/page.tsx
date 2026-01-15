@@ -464,10 +464,6 @@ function ForEngineers({ lang }: { lang: string }) {
               name: 'fumadocs-openapi',
               description: 'Extend Fumadocs to render OpenAPI docs.',
             },
-            {
-              name: 'fumadocs-obsidian',
-              description: 'Extend Fumadocs to handle Obsidian-style Markdown.',
-            },
           ].map((item) => (
             <div
               key={item.name}

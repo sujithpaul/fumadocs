@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, NextFetchEvent } from 'next/server';
 import { isMarkdownPreferred, rewritePath } from 'fumadocs-core/negotiation';
 import { createI18nMiddleware } from 'fumadocs-core/i18n/middleware';
 import { i18n } from '@/lib/i18n';
@@ -20,7 +20,7 @@ const SKIP_I18N_PATHS = [
   '/robots.txt',
 ];
 
-export default function proxy(request: NextRequest) {
+export default async function proxy(request: NextRequest, event: NextFetchEvent) {
   const pathname = request.nextUrl.pathname;
 
   // Skip i18n for static assets and API routes
@@ -31,7 +31,12 @@ export default function proxy(request: NextRequest) {
   }
 
   // Handle i18n routing first
-  const i18nResponse = i18nProxy(request);
+  const i18nResponse = await i18nProxy(request, event);
+
+  // If i18n middleware didn't return a response, continue
+  if (!i18nResponse) {
+    return NextResponse.next();
+  }
 
   // If i18n middleware returned a redirect, return it immediately
   if (i18nResponse.status === 307 || i18nResponse.status === 308) {

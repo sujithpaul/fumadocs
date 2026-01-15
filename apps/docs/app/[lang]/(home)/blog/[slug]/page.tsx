@@ -75,5 +75,8 @@ export async function generateMetadata(
 }
 
 export function generateStaticParams(): Array<{ lang: string; slug: string }> {
-  return blog.generateParams();
+  return blog.generateParams().map((params) => ({
+    lang: params.lang,
+    slug: params.slug[0],
+  }));
 }
