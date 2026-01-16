@@ -15,6 +15,10 @@ import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
 
 interface NavbarProps {
   lang: string;
+  /**
+   * Hide navbar on mobile (for docs pages where DocsLayout handles mobile)
+   */
+  hideOnMobile?: boolean;
 }
 
 function getNavbarLinks(lang: string) {
@@ -107,12 +111,12 @@ function getNavbarLinks(lang: string) {
   ];
 }
 
-export function Navbar({ lang }: NavbarProps) {
+export function Navbar({ lang, hideOnMobile = false }: NavbarProps) {
   return (
     <HomeLayout
       {...baseOptions()}
       links={getNavbarLinks(lang)}
-      className="!flex-none dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)] [--color-fd-primary:var(--color-brand)]"
+      className={`!flex-none dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)] [--color-fd-primary:var(--color-brand)] ${hideOnMobile ? 'max-md:hidden' : ''}`}
     />
   );
 }

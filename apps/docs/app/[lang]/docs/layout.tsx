@@ -15,22 +15,27 @@ export default async function Layout({
 
   return (
     <>
-      <Navbar lang={lang} />
+      <Navbar lang={lang} hideOnMobile />
       <DocsLayout
       {...base}
       tree={source.getPageTree(lang)}
-      // just icon items
-      links={linkItems.filter((item) => item.type === 'icon')}
+      // All links for mobile sidebar, icon items shown in sidebar footer
+      links={linkItems}
       nav={{
-        ...base.nav,
+        enabled: true,
+        // Logo only visible on mobile header (hidden on desktop via CSS)
         title: (
-          <>
+          <span className="md:hidden flex items-center gap-2.5">
             {logo}
-            <span className="font-medium in-[.uwu]:hidden max-md:hidden">Fumadocs</span>
-          </>
+            <span className="font-medium">Fumadocs</span>
+          </span>
         ),
       }}
+      searchToggle={{
+        enabled: false,
+      }}
       sidebar={{
+        collapsible: false,
         tabs: {
           transform(option, node) {
             const meta = source.getNodeMeta(node);
