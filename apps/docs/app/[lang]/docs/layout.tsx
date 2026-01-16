@@ -4,6 +4,7 @@ import { source } from '@/lib/source';
 import { AISearch, AISearchPanel, AISearchTrigger } from '@/components/ai/search';
 import 'katex/dist/katex.min.css';
 import { getSection } from '@/lib/source/navigation';
+import { Navbar } from '@/components/layout/navbar';
 
 export default async function Layout({
   params,
@@ -13,7 +14,9 @@ export default async function Layout({
   const base = baseOptions();
 
   return (
-    <DocsLayout
+    <>
+      <Navbar lang={lang} />
+      <DocsLayout
       {...base}
       tree={source.getPageTree(lang)}
       // just icon items
@@ -60,5 +63,6 @@ export default async function Layout({
         <AISearchTrigger />
       </AISearch>
     </DocsLayout>
+    </>
   );
 }
