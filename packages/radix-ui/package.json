@@ -96,9 +96,9 @@
   "scripts": {
     "build": "pnpm build:layout && pnpm build:tailwind",
     "build:layout": "tsdown",
-    "build:tailwind": "tailwindcss -i css/style.css -o ./dist/style.css && tailwindcss -i src/components/image-zoom.css -o dist/components/image-zoom.css",
+    "build:tailwind": "tailwindcss -i css/style.css -o ./dist/style.css && tailwindcss -i src/components/image-zoom.css -o dist/image-zoom.css",
     "clean": "rimraf dist",
-    "dev": "concurrently \"tsdown --watch\" \"tailwindcss -i css/style.css -o ./dist/style.css -w\" \"tailwindcss -i src/components/image-zoom.css -o dist/components/image-zoom.css -w\"",
+    "dev": "concurrently \"tsdown --watch\" \"tailwindcss -i css/style.css -o ./dist/style.css -w\" \"tailwindcss -i src/components/image-zoom.css -o dist/image-zoom.css -w\"",
     "lint": "eslint .",
     "types:check": "tsc --noEmit"
   },
