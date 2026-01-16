@@ -102,7 +102,7 @@ export function DocsLayout({
         {links
           .filter((v) => v.type !== 'icon')
           .map((item, i, list) => (
-            <SidebarLinkItem key={i} item={item} className={cn(i === list.length - 1 && 'mb-4')} />
+            <SidebarLinkItem key={i} item={item} className={cn('lg:hidden', i === list.length - 1 && 'mb-4')} />
           ))}
         <SidebarPageTree {...components} />
       </SidebarViewport>
