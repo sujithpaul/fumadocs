@@ -180,7 +180,7 @@ function HeaderNavigationMenu({
 
   return (
     <NavigationMenu value={value} onValueChange={setValue} asChild>
-      <header id="nd-nav" {...props} className={cn('sticky h-14 top-0 z-40', props.className)}>
+      <header id="nd-nav" suppressHydrationWarning {...props} className={cn('sticky h-14 top-0 z-40', props.className)}>
         <div
           className={cn(
             'backdrop-blur-lg border-b transition-colors *:mx-auto *:max-w-(--fd-layout-width)',
@@ -189,7 +189,7 @@ function HeaderNavigationMenu({
           )}
         >
           <NavigationMenuList className="flex h-14 w-full items-center px-4" asChild>
-            <nav>{props.children}</nav>
+            <nav suppressHydrationWarning>{props.children}</nav>
           </NavigationMenuList>
 
           <NavigationMenuViewport />

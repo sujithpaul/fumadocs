@@ -98,7 +98,7 @@
     "build:layout": "tsdown",
     "build:tailwind": "tailwindcss -i css/style.css -o ./dist/style.css && tailwindcss -i src/components/image-zoom.css -o dist/image-zoom.css",
     "clean": "rimraf dist",
-    "dev": "concurrently \"tsdown --watch\" \"tailwindcss -i css/style.css -o ./dist/style.css -w\" \"tailwindcss -i src/components/image-zoom.css -o dist/image-zoom.css -w\"",
+    "dev": "node scripts/wait-for-ui.js && pnpm build:tailwind && concurrently \"tsdown --watch\" \"tailwindcss -i css/style.css -o ./dist/style.css -w\" \"tailwindcss -i src/components/image-zoom.css -o dist/image-zoom.css -w\"",
     "lint": "eslint .",
     "types:check": "tsc --noEmit"
   },
