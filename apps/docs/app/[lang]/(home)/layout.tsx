@@ -16,9 +16,14 @@ export default async function Layout({
   children,
 }: LayoutProps<'/[lang]'>) {
   const { lang } = await params;
+  const base = baseOptions();
   return (
     <HomeLayout
-      {...baseOptions()}
+      {...base}
+      nav={{
+        ...base.nav,
+        transparentMode: 'always',
+      }}
       links={[
         {
           type: 'menu',
@@ -101,10 +106,12 @@ export default async function Layout({
             </NavbarMenu>
           ),
         },
-        ...linkItems.map((item) => ({
-          ...item,
-          ...('url' in item && item.url ? { url: `/${lang}${item.url}` } : {}),
-        })),
+        ...linkItems
+          .filter((item) => item.type !== 'icon' || item.label !== 'github')
+          .map((item) => ({
+            ...item,
+            ...('url' in item && item.url ? { url: `/${lang}${item.url}` } : {}),
+          })),
       ]}
       className="dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)] [--color-fd-primary:var(--color-brand)]"
     >

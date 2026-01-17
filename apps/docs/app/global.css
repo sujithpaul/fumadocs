@@ -101,6 +101,12 @@ body {
   background-color: var(--color-fd-background);
 }
 
+/* Force navbar transparent on home page */
+#nd-home-layout header#nd-nav nav {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 .dark {
   --headless-color: hsl(250 100% 80%);
   --framework-color: #fff383;
