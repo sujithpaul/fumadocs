@@ -93,46 +93,82 @@ export default async function Page({
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
+      {/* The Shift Section */}
       <section className="mint-features">
         <div className="text-center mb-16">
-          <span className="mint-section-label">The Problem</span>
-          <h2 className="mint-section-title">Managing a therapy practice is hard</h2>
+          <span className="mint-section-label">The Shift</span>
+          <h2 className="mint-section-title">Therapy practices have evolved</h2>
           <p className="mint-section-desc mx-auto">
-            Scattered spreadsheets. Manual tracking. Hours spent on admin instead of clients.
-            You didn&apos;t become a therapist to drown in paperwork.
+            The best clinics have moved beyond spreadsheets and disconnected tools.
+            They&apos;re running smarter, serving clients better, and growing faster.
           </p>
         </div>
 
-        <div className="mint-problem-grid">
-          <div className="mint-problem-card">
-            <span className="mint-problem-icon">📋</span>
-            <p>Assessments scattered across different tools</p>
+        <div className="mint-evolution-grid">
+          <div className="mint-evolution-card">
+            <div className="mint-evolution-old">
+              <span className="mint-evolution-label">Before</span>
+              <p>Paper forms and scattered files</p>
+            </div>
+            <div className="mint-evolution-arrow">
+              <ArrowRight className="w-5 h-5" />
+            </div>
+            <div className="mint-evolution-new">
+              <span className="mint-evolution-label">Now</span>
+              <p>Digital assessments, instantly accessible</p>
+            </div>
           </div>
-          <div className="mint-problem-card">
-            <span className="mint-problem-icon">🎯</span>
-            <p>No clear way to track client goals</p>
+          <div className="mint-evolution-card">
+            <div className="mint-evolution-old">
+              <span className="mint-evolution-label">Before</span>
+              <p>Manual goal tracking in notebooks</p>
+            </div>
+            <div className="mint-evolution-arrow">
+              <ArrowRight className="w-5 h-5" />
+            </div>
+            <div className="mint-evolution-new">
+              <span className="mint-evolution-label">Now</span>
+              <p>Real-time progress dashboards</p>
+            </div>
           </div>
-          <div className="mint-problem-card">
-            <span className="mint-problem-icon">📅</span>
-            <p>Scheduling chaos across departments</p>
+          <div className="mint-evolution-card">
+            <div className="mint-evolution-old">
+              <span className="mint-evolution-label">Before</span>
+              <p>Phone calls and calendar conflicts</p>
+            </div>
+            <div className="mint-evolution-arrow">
+              <ArrowRight className="w-5 h-5" />
+            </div>
+            <div className="mint-evolution-new">
+              <span className="mint-evolution-label">Now</span>
+              <p>Smart scheduling with auto-reminders</p>
+            </div>
           </div>
-          <div className="mint-problem-card">
-            <span className="mint-problem-icon">📊</span>
-            <p>Reports take hours to compile</p>
+          <div className="mint-evolution-card">
+            <div className="mint-evolution-old">
+              <span className="mint-evolution-label">Before</span>
+              <p>Hours compiling monthly reports</p>
+            </div>
+            <div className="mint-evolution-arrow">
+              <ArrowRight className="w-5 h-5" />
+            </div>
+            <div className="mint-evolution-new">
+              <span className="mint-evolution-label">Now</span>
+              <p>One-click insights and analytics</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Platform Section */}
       <section id="features" className="mint-stories">
         <div className="mint-stories-container">
           <div className="mint-stories-header">
-            <span className="mint-section-label">The Solution</span>
-            <h2 className="mint-section-title">Everything you need in one place</h2>
+            <span className="mint-section-label">The Platform</span>
+            <h2 className="mint-section-title">Built for how modern practices work</h2>
             <p className="mint-section-desc mx-auto">
-              Metanoa replaces the patchwork of tools with one complete platform
-              designed specifically for therapy practices.
+              One connected platform that brings your entire practice together.
+              Designed by therapists, for therapists.
             </p>
           </div>
 
@@ -150,7 +186,7 @@ export default async function Page({
             <FeatureCard
               icon={<Calendar className="w-6 h-6" />}
               title="Session Scheduling"
-              description="Book sessions, send reminders, manage therapist availability. No more double-bookings or missed appointments."
+              description="Book sessions, send reminders, manage therapist availability. Everything syncs automatically."
             />
             <FeatureCard
               icon={<FileText className="w-6 h-6" />}
@@ -171,64 +207,64 @@ export default async function Page({
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Journey Section */}
       <section className="mint-features">
         <div className="text-center mb-16">
-          <span className="mint-section-label">How It Works</span>
-          <h2 className="mint-section-title">From intake to outcome, simplified</h2>
+          <span className="mint-section-label">The Journey</span>
+          <h2 className="mint-section-title">From first visit to lasting outcomes</h2>
         </div>
 
         <div className="mint-steps">
           <Step
             number="1"
-            title="Client Onboarding"
-            description="Add new clients in minutes. Capture all the information you need with customizable intake forms."
+            title="Seamless Onboarding"
+            description="New clients start with a smooth digital intake. All information flows directly into their profile."
           />
           <Step
             number="2"
-            title="Run Assessments"
+            title="Comprehensive Assessment"
             description="Choose from your assessment library. Complete evaluations on any device. Results sync automatically."
           />
           <Step
             number="3"
-            title="Set Goals"
-            description="Based on assessment results, set clear goals from your goal bank. Assign to therapists."
+            title="Personalized Goals"
+            description="Set clear, measurable goals tailored to each client. Track progress with every session."
           />
           <Step
             number="4"
-            title="Track Progress"
-            description="Document each session. Track goal progress. Generate reports for families and payers."
+            title="Visible Progress"
+            description="Generate beautiful reports that show real outcomes. Share wins with families and stakeholders."
           />
         </div>
       </section>
 
-      {/* Billing & Analytics */}
+      {/* Insights Section */}
       <section className="mint-stories">
         <div className="mint-stories-container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="mint-section-label">Billing & Analytics</span>
-              <h2 className="mint-section-title">Get paid. Stay informed.</h2>
+              <span className="mint-section-label">The Insights</span>
+              <h2 className="mint-section-title">See your practice clearly</h2>
               <p className="mint-section-desc">
-                Track billing, manage insurance claims, and understand your practice performance
-                with real-time analytics.
+                Modern practices run on data. Know exactly where you stand with
+                real-time dashboards and actionable insights.
               </p>
               <ul className="mint-check-list">
                 <li>
                   <CheckCircle2 className="w-5 h-5 text-[var(--mint-brand)]" />
-                  <span>Automated invoice generation</span>
+                  <span>Revenue trends at a glance</span>
                 </li>
                 <li>
                   <CheckCircle2 className="w-5 h-5 text-[var(--mint-brand)]" />
-                  <span>Insurance claim tracking</span>
+                  <span>Client outcome tracking</span>
                 </li>
                 <li>
                   <CheckCircle2 className="w-5 h-5 text-[var(--mint-brand)]" />
-                  <span>Revenue and session analytics</span>
+                  <span>Team performance visibility</span>
                 </li>
                 <li>
                   <CheckCircle2 className="w-5 h-5 text-[var(--mint-brand)]" />
-                  <span>Therapist productivity reports</span>
+                  <span>Automated billing & claims</span>
                 </li>
               </ul>
             </div>
@@ -258,7 +294,7 @@ export default async function Page({
         </div>
       </section>
 
-      {/* EIP Section */}
+      {/* Specialized Section */}
       <section className="mint-features">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="mint-eip-visual">
@@ -269,8 +305,8 @@ export default async function Page({
             </div>
           </div>
           <div>
-            <span className="mint-section-label">Specialized Programs</span>
-            <h2 className="mint-section-title">Early Intervention, done right</h2>
+            <span className="mint-section-label">Specialized</span>
+            <h2 className="mint-section-title">Ready for Early Intervention</h2>
             <p className="mint-section-desc">
               Running an EIP program? Metanoa has a dedicated module for early intervention
               services with everything you need to stay compliant and effective.

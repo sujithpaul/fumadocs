@@ -373,6 +373,89 @@
   }
 }
 
+/* Evolution Grid - Before/After Cards */
+.mint-evolution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mint-evolution-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--mint-bg-secondary);
+  border: 1px solid var(--mint-border);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.mint-evolution-card:hover {
+  border-color: var(--mint-brand);
+}
+
+.mint-evolution-old {
+  flex: 1;
+  text-align: center;
+}
+
+.mint-evolution-old p {
+  font-size: 0.875rem;
+  color: var(--mint-text-muted);
+  margin: 0;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.mint-evolution-arrow {
+  flex-shrink: 0;
+  color: var(--mint-brand);
+}
+
+.mint-evolution-new {
+  flex: 1;
+  text-align: center;
+}
+
+.mint-evolution-new p {
+  font-size: 0.875rem;
+  color: var(--mint-text);
+  margin: 0;
+  font-weight: 500;
+}
+
+.mint-evolution-label {
+  display: block;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.375rem;
+  font-weight: 600;
+}
+
+.mint-evolution-old .mint-evolution-label {
+  color: var(--mint-text-muted);
+}
+
+.mint-evolution-new .mint-evolution-label {
+  color: var(--mint-brand);
+}
+
+@media (max-width: 480px) {
+  .mint-evolution-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .mint-evolution-arrow {
+    transform: rotate(90deg);
+  }
+}
+
 /* Trust Badges / Logos Section */
 .mint-logos {
   padding: 3rem 1.5rem;
