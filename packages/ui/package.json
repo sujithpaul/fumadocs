@@ -28,7 +28,7 @@
   "scripts": {
     "build": "tsdown",
     "clean": "rimraf dist",
-    "dev": "node scripts/dev.js",
+    "dev": "tsdown --watch",
     "lint": "eslint .",
     "types:check": "tsc --noEmit"
   },
