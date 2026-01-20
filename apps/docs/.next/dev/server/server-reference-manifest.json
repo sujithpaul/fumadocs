@@ -2,12 +2,6 @@
   "node": {
     "401840cea0e1440c0e5634d9c54c9cfe9c9f3eda5d": {
       "workers": {
-        "app/[lang]/(home)/sponsors/page": {
-          "moduleId": "[project]/.next-internal/server/app/[lang]/(home)/sponsors/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/github.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "$$RSC_SERVER_ACTION_1",
-          "filename": "lib/github.ts"
-        },
         "app/[lang]/docs/[[...slug]]/page": {
           "moduleId": "[project]/.next-internal/server/app/[lang]/docs/[[...slug]]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/github.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -16,7 +10,6 @@
         }
       },
       "layer": {
-        "app/[lang]/(home)/sponsors/page": "rsc",
         "app/[lang]/docs/[[...slug]]/page": "rsc"
       },
       "filename": "lib/github.ts",
@@ -24,12 +17,6 @@
     },
     "40f3f5fc2f3410718dd8fef8b3efdebd8ce68d065d": {
       "workers": {
-        "app/[lang]/(home)/sponsors/page": {
-          "moduleId": "[project]/.next-internal/server/app/[lang]/(home)/sponsors/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/github.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "$$RSC_SERVER_ACTION_0",
-          "filename": "lib/github.ts"
-        },
         "app/[lang]/docs/[[...slug]]/page": {
           "moduleId": "[project]/.next-internal/server/app/[lang]/docs/[[...slug]]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/github.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -38,7 +25,6 @@
         }
       },
       "layer": {
-        "app/[lang]/(home)/sponsors/page": "rsc",
         "app/[lang]/docs/[[...slug]]/page": "rsc"
       },
       "filename": "lib/github.ts",

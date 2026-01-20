@@ -190,9 +190,9 @@
     --color-twoslash-tag-annotate-foreground: #1ba673;
     --color-twoslash-tag-annotate: #1ba67320;
     --spacing-page: 1436px;
-    --color-brand: #dd7627;
-    --color-landing-foreground: #59592a;
-    --color-landing-foreground-200: #a8a866;
+    --color-brand: #171717;
+    --color-landing-foreground: #0a0a0a;
+    --color-landing-foreground-200: #737373;
   }
 }
 
@@ -5223,31 +5223,26 @@
 }
 
 .dark {
-  --color-landing-foreground: #e4e2d0;
-  --color-landing-foreground-200: #b7af7e;
-  --color-brand: #fff383;
-  --color-brand-secondary: #fc7744;
-  --color-brand-secondary-foreground: #521700;
-  --color-brand-foreground: black;
-  --color-brand-200: #fff7c8;
-}
-
-.ui {
-  --color-fd-primary: var(--ui-color);
-}
-
-.headless {
-  --color-fd-primary: var(--headless-color);
-}
-
-.framework {
-  --color-fd-primary: var(--framework-color);
+  --color-landing-foreground: #fafafa;
+  --color-landing-foreground-200: #a3a3a3;
+  --color-brand: #fafafa;
+  --color-brand-foreground: #171717;
+  --color-brand-secondary: #262626;
+  --color-brand-secondary-foreground: #fafafa;
+  --color-brand-200: #262626;
 }
 
 :root {
   --headless-color: #4b2ce8;
   --framework-color: #cc8b00;
   --ui-color: #297bff;
+  --color-fd-primary: #171717;
+  --color-fd-primary-foreground: #fafafa;
+}
+
+.ui, .headless, .framework {
+  --color-fd-primary: #171717;
+  --color-fd-primary-foreground: #fafafa;
 }
 
 html {
@@ -5267,9 +5262,16 @@ body {
 }
 
 .dark {
+  --color-fd-primary: #fafafa;
+  --color-fd-primary-foreground: #171717;
   --headless-color: #a9f;
   --framework-color: #fff383;
   --ui-color: #a9ceff;
+}
+
+.dark .ui, .dark .headless, .dark .framework {
+  --color-fd-primary: #fafafa;
+  --color-fd-primary-foreground: #171717;
 }
 
 @keyframes circuit_1 {

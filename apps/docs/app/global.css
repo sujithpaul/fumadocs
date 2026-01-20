@@ -7,25 +7,42 @@
 
 @theme {
   --spacing-page: 1436px;
-  --color-brand: hsl(26, 73%, 51%);
-  --color-brand-foreground: white;
-  --color-brand-secondary: #c6bb58;
-  --color-brand-secondary-foreground: #97890c;
-  --color-brand-200: hsl(33, 100%, 50%);
+  /* Map to shadcn light theme (primary / secondary / accent) */
+  /* shadcn: --primary: 0 0% 9%; --primary-foreground: 0 0% 98%; */
+  --color-brand: hsl(0 0% 9%);
+  --color-brand-foreground: hsl(0 0% 98%);
 
-  --color-landing-foreground: #59592a;
-  --color-landing-foreground-200: #a8a866;
+  /* shadcn: --secondary: 0 0% 96.1%; --secondary-foreground: 0 0% 9%; */
+  --color-brand-secondary: hsl(0 0% 96.1%);
+  --color-brand-secondary-foreground: hsl(0 0% 9%);
+
+  /* Use accent/muted tone for lighter brand surface */
+  /* shadcn accent/muted: 0 0% 96.1% */
+  --color-brand-200: hsl(0 0% 96.1%);
+
+  /* Use foreground / muted-foreground for landing text */
+  /* shadcn: --foreground: 0 0% 3.9%; --muted-foreground: 0 0% 45.1%; */
+  --color-landing-foreground: hsl(0 0% 3.9%);
+  --color-landing-foreground-200: hsl(0 0% 45.1%);
 }
 
 .dark {
-  --color-landing-foreground: #e4e2d0;
-  --color-landing-foreground-200: #b7af7e;
+  /* Map to shadcn dark theme (primary / secondary / accent) */
+  /* shadcn dark: --foreground: 0 0% 98%; --muted-foreground: 0 0% 63.9%; */
+  --color-landing-foreground: hsl(0 0% 98%);
+  --color-landing-foreground-200: hsl(0 0% 63.9%);
 
-  --color-brand: #fff383;
-  --color-brand-secondary: #fc7744;
-  --color-brand-secondary-foreground: #521700;
-  --color-brand-foreground: black;
-  --color-brand-200: #fff7c8;
+  /* shadcn dark: --primary: 0 0% 98%; --primary-foreground: 0 0% 9%; */
+  --color-brand: hsl(0 0% 98%);
+  --color-brand-foreground: hsl(0 0% 9%);
+
+  /* shadcn dark: --secondary: 0 0% 14.9%; --secondary-foreground: 0 0% 98%; */
+  --color-brand-secondary: hsl(0 0% 14.9%);
+  --color-brand-secondary-foreground: hsl(0 0% 98%);
+
+  /* Use accent/muted tone for lighter brand surface in dark */
+  /* shadcn dark accent/muted: 0 0% 14.9% */
+  --color-brand-200: hsl(0 0% 14.9%);
 }
 
 @theme inline {
@@ -71,22 +88,32 @@
   );
 }
 
-.ui {
-  --color-fd-primary: var(--ui-color);
-}
-
-.headless {
-  --color-fd-primary: var(--headless-color);
-}
-
-.framework {
-  --color-fd-primary: var(--framework-color);
-}
-
 :root {
+  /* Section-specific colors (used on landing pages etc.) */
   --headless-color: hsl(250, 80%, 54%);
   --framework-color: hsl(41, 100%, 40%);
   --ui-color: hsl(217, 100%, 58%);
+
+  /* Override Fumadocs primary to follow shadcn light theme */
+  /* shadcn: --primary: 0 0% 9%; --primary-foreground: 0 0% 98%; */
+  --color-fd-primary: hsl(0 0% 9%);
+  --color-fd-primary-foreground: hsl(0 0% 98%);
+}
+
+/* Override section-specific classes to use shadcn colors instead of orange/blue/purple */
+.ui {
+  --color-fd-primary: hsl(0 0% 9%);
+  --color-fd-primary-foreground: hsl(0 0% 98%);
+}
+
+.headless {
+  --color-fd-primary: hsl(0 0% 9%);
+  --color-fd-primary-foreground: hsl(0 0% 98%);
+}
+
+.framework {
+  --color-fd-primary: hsl(0 0% 9%);
+  --color-fd-primary-foreground: hsl(0 0% 98%);
 }
 
 html {
@@ -108,9 +135,22 @@ body {
 }
 
 .dark {
+  /* Override Fumadocs primary to follow shadcn dark theme */
+  /* shadcn dark: --primary: 0 0% 98%; --primary-foreground: 0 0% 9%; */
+  --color-fd-primary: hsl(0 0% 98%);
+  --color-fd-primary-foreground: hsl(0 0% 9%);
+
   --headless-color: hsl(250 100% 80%);
   --framework-color: #fff383;
   --ui-color: #a9ceff;
+}
+
+/* Override section-specific classes in dark mode too */
+.dark .ui,
+.dark .headless,
+.dark .framework {
+  --color-fd-primary: hsl(0 0% 98%);
+  --color-fd-primary-foreground: hsl(0 0% 9%);
 }
 
 @keyframes circuit_1 {

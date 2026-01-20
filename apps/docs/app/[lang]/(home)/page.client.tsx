@@ -57,8 +57,18 @@ export function Hero() {
           className="absolute inset-0 animate-fd-fade-in duration-800"
           colors={
             resolvedTheme === 'dark'
-              ? ['#39BE1C', '#9c2f05', '#7A2A0000']
-              : ['#fcfc51', '#ffa057', '#7A2A0020']
+              ? [
+                  /* shadcn dark: secondary / accent / transparent */
+                  'hsl(0 0% 14.9%)',
+                  'hsl(0 0% 98%)',
+                  'hsl(0 0% 14.9% / 0)',
+                ]
+              : [
+                  /* shadcn light: secondary / primary / transparent */
+                  'hsl(0 0% 96.1%)',
+                  'hsl(0 0% 9%)',
+                  'hsl(0 0% 96.1% / 0.2)',
+                ]
           }
           colorBack="#00000000"
           softness={1}
@@ -75,7 +85,8 @@ export function Hero() {
           width={720}
           height={720}
           colorBack="#00000000"
-          colorFront={resolvedTheme === 'dark' ? '#DF3F00' : '#fa8023'}
+          /* shadcn neutral primary instead of orange sphere */
+          colorFront={resolvedTheme === 'dark' ? 'hsl(0 0% 96.1%)' : 'hsl(0 0% 9%)'}
           shape="sphere"
           type="4x4"
           scale={0.5}
@@ -335,7 +346,8 @@ export function AgnosticBackground() {
     >
       <Dithering
         colorBack="#00000000"
-        colorFront={resolvedTheme === 'dark' ? '#fc7744' : '#c6bb58'}
+        /* Use shadcn-like neutral primary for the background accent instead of orange */
+        colorFront={resolvedTheme === 'dark' ? 'hsl(0 0% 96.1%)' : 'hsl(0 0% 9%)'}
         shape="warp"
         type="4x4"
         speed={visible ? 0.4 : 0}
@@ -353,8 +365,19 @@ export function ContentAdoptionBackground(props: ComponentProps<typeof GrainGrad
     <GrainGradient
       colors={
         resolvedTheme === 'dark'
-          ? ['#39BE1C', '#9c2f05', '#7A2A0000']
-          : ['#DF3F00', '#fcfc51', '#ffa057', '#7A2A0020']
+          ? [
+              /* dark muted / secondary tones */
+              'hsl(0 0% 14.9%)',
+              'hsl(0 0% 98%)',
+              'hsl(0 0% 14.9% / 0)',
+            ]
+          : [
+              /* light secondary / accent tones */
+              'hsl(0 0% 96.1%)',
+              'hsl(0 0% 9%)',
+              'hsl(0 0% 96.1%)',
+              'hsl(0 0% 96.1% / 0.2)',
+            ]
       }
       speed={0}
       colorBack="#1D1004"
