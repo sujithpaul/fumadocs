@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":["file:///Users/sujithpaul/Documents/GitHub/spaul/fumadocs/apps/docs/components/api-page.tsx"],"sourcesContent":["import { openapi } from '@/lib/openapi';\nimport { createAPIPage } from 'fumadocs-openapi/ui';\n\nexport const APIPage = createAPIPage(openapi, {\n  shikiOptions: {\n    themes: {\n      dark: 'vesper',\n      light: 'vitesse-light',\n    },\n  },\n});\n"],"names":[],"mappings":";;;;AAAA;AACA;AAAA;;;;;;;;AAEO,MAAM,UAAU,IAAA,oYAAa,EAAC,kIAAO,EAAE;IAC5C,cAAc;QACZ,QAAQ;YACN,MAAM;YACN,OAAO;QACT;IACF;AACF"}}]
-}

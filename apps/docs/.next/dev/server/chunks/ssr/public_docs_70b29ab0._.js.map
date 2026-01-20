@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/sujithpaul/Documents/GitHub/spaul/fumadocs/apps/docs/public/docs/ai-page-actions.png.mjs%20%28structured%20image%20object%20with%20data%20url%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 1908, height: 704, blurWidth: 8, blurHeight: 3, blurDataURL: \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAYAAACuyE5IAAAAQ0lEQVR42lWKMQpAMQjFeoa2KE7ioOL9D/g+Cn/oEAgk696LiICZoX3v/bDOOXB3ZCZEZKafbqulh6qCqs7EzAMR4QPY8R79g9EsIgAAAABJRU5ErkJggg==\"};\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,4JAAG;IAAE,OAAO;IAAM,QAAQ;IAAK,WAAW;IAAG,YAAY;IAAG,aAAa;AAAgM"}},
-    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///Users/sujithpaul/Documents/GitHub/spaul/fumadocs/apps/docs/public/docs/ai-search.png.mjs%20%28structured%20image%20object%20with%20data%20url%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 1876, height: 376, blurWidth: 8, blurHeight: 2, blurDataURL: \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAANElEQVR42j2JywkAMAjFnEJU1IL97L/hK148BEJCZoZzHzIX2lV1YGZQx6qNiIC7z+wuIvikkBUGcfVH7AAAAABJRU5ErkJggg==\"};\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,mJAAG;IAAE,OAAO;IAAM,QAAQ;IAAK,WAAW;IAAG,YAAY;IAAG,aAAa;AAA4K"}}]
-}
