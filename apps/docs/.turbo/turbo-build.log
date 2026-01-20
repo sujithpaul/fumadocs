@@ -1,0 +1,69 @@
+
+
+> docs@0.1.3 build /Users/sujithpaul/Documents/GitHub/spaul/fumadocs/apps/docs
+> pnpm build:pre && next build && pnpm build:post
+
+
+> docs@0.1.3 build:pre /Users/sujithpaul/Documents/GitHub/spaul/fumadocs/apps/docs
+> bun ./scripts/pre-build.ts
+
+[MDX] generated files in 9.831417000000101ms
+[1m[38;2;173;127;168m▲ Next.js 16.1.1[39m[22m (Turbopack)
+- Environments: .env
+
+[37m[1m [22m[39m Creating an optimized production build ...
+[32m[1m✓[22m[39m Compiled successfully in 21.7s
+[?25l[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[?25h[?25l[37m[1m [22m[39m Finished TypeScript in 5.7s  [36m.[39m[2K[1G[?25h[37m[1m [22m[39m Finished TypeScript in 5.7s    [32m[1m✓[22m[39m Finished TypeScript in 5.7s 
+[?25l[37m[1m [22m[39m Collecting page data using 9 workers  [36m.[39m[2K[1G[37m[1m [22m[39m Collecting page data using 9 workers  [36m..[39m[2K[1G[?25h[33m[1m⚠[22m[39m Using edge runtime on a page currently disables static generation for that page
+[?25l [36m.[39m [2K[1G [36m..[39m [2K[1G [36m...[39m [2K[1G[?25h[37m[1m [22m[39m Collecting page data using 9 workers in 746.9ms    [32m[1m✓[22m[39m Collecting page data using 9 workers in 746.9ms 
+[?25l[37m[1m [22m[39m Generating static pages using 9 workers (0/618)  [36m[    ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (48/618)  [36m[=   ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (150/618)  [36m[==  ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (186/618)  [36m[=== ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (202/618)  [36m[ ===][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (223/618)  [36m[  ==][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (250/618)  [36m[   =][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (273/618)  [36m[    ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (279/618)  [36m[   =][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (297/618)  [36m[  ==][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (321/618)  [36m[ ===][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (337/618)  [36m[====][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (345/618)  [36m[=== ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (360/618)  [36m[==  ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (384/618)  [36m[=   ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (399/618)  [36m[    ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (417/618)  [36m[=   ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (428/618)  [36m[==  ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (441/618)  [36m[=== ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (465/618)  [36m[ ===][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (489/618)  [36m[  ==][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (502/618)  [36m[   =][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (526/618)  [36m[    ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (526/618)  [36m[   =][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (542/618)  [36m[  ==][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (560/618)  [36m[ ===][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (573/618)  [36m[====][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (586/618)  [36m[=== ][39m[2K[1G[37m[1m [22m[39m Generating static pages using 9 workers (592/618)  [36m[==  ][39m[2K[1G[?25h[32m[1m✓[22m[39m Generating static pages using 9 workers (618/618) in 5.8s
+[?25l[37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G[?25h[37m[1m [22m[39m Finalizing page optimization in 40.4ms    [32m[1m✓[22m[39m Finalizing page optimization in 40.4ms 
+
+[4mRoute (app)[24m
+┌ ○ /_not-found
+├ ƒ /[lang]
+├ ƒ /[lang]/blog
+├ ● /[lang]/blog/[slug]
+│ ├ /en/blog/2024-5-15
+│ ├ /en/blog/2024-5-16
+│ ├ /en/blog/a-mistake
+│ └ [+43 more paths]
+├ ƒ /[lang]/blog/rss.xml
+├ ƒ /[lang]/blog/test
+├ ● /[lang]/docs/[[...slug]]
+│ ├ /en/docs/comparisons
+│ ├ /en/docs
+│ ├ /en/docs/navigation
+│ └ [+279 more paths]
+├ ƒ /[lang]/showcase
+├ ƒ /[lang]/sponsors
+├ ƒ /api/[transport]
+├ ƒ /api/chat
+├ ƒ /api/proxy
+├ ○ /icon.png
+├ ○ /llms-full.txt
+├ ● /llms.mdx/[[...slug]]
+│ ├ /llms.mdx/comparisons
+│ ├ /llms.mdx
+│ ├ /llms.mdx/navigation
+│ └ [+138 more paths]
+├ ○ /llms.txt
+├ ● /og/[...slug]
+│ ├ /og/comparisons/image.webp
+│ ├ /og/image.webp
+│ ├ /og/navigation/image.webp
+│ └ [+138 more paths]
+├ ○ /sitemap.xml
+└ ○ /static.json
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses [36mgenerateStaticParams[39m)
+ƒ  (Dynamic)  server-rendered on demand
+
+[?25h
+> docs@0.1.3 build:post /Users/sujithpaul/Documents/GitHub/spaul/fumadocs/apps/docs
+> bun ./scripts/post-build.ts
+

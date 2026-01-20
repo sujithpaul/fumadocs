@@ -1,0 +1,42 @@
+[00:00:00.673] Server  LOG     [MDX] generated files in 20.365541000000007ms
+[00:00:00.690] Server  LOG     [MDX] started dev server
+[00:00:00.945] Server  LOG     ✓ Ready in 770ms
+[00:00:04.931] Server  LOG     ○ Compiling /[lang] ...
+[00:00:17.008] Server  WARN    Image with src "/_next/static/media/hero-bg.368e4d05.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:00:17.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.379] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.506] Browser WARN    Image with src "/_next/static/media/hero-bg.368e4d05.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:00:18.034] Browser WARN    Image with src "/_next/static/media/hero-bg.368e4d05.png" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:00:27.620] Server  LOG     ○ Compiling /[lang]/docs/[[...slug]] ...
+[00:00:50.255] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/shadcn.png" "received" null
+[00:00:50.256] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/c15t.png" "received" null
+[00:00:50.256] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/better-t-stack.jpeg" "received" null
+[00:00:50.256] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/ultracite.jpg" "received" null
+[00:00:50.256] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/dokploy.png" "received" null
+[00:00:50.257] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/zod.png" "received" null
+[00:00:50.333] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/nuqs.jpg" "received" null
+[00:00:50.334] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/sim.png" "received" null
+[00:00:50.334] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/comfydeploy.png" "received" null
+[00:00:50.349] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/octarine.png" "received" null
+[00:00:50.353] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/llm-gateway.png" "received" null
+[00:00:50.402] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/zen-browser.png" "received" null
+[00:00:50.405] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/hero-ui.png" "received" null
+[00:00:50.406] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/hiro.png" "received" null
+[00:00:50.410] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/next-faq.png" "received" null
+[00:00:50.431] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/animate-ui.png" "received" null
+[00:00:50.460] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/kibo-ui.jpg" "received" null
+[00:00:50.463] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/hexta-ui.png" "received" null
+[00:00:50.467] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/libra.png" "received" null
+[00:00:50.501] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/freestyle.png" "received" null
+[00:00:50.512] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/yamlresume.png" "received" null
+[00:00:50.513] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/kaneo.png" "received" null
+[00:00:50.543] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/axionjs.jpg" "received" null
+[00:00:50.556] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/codehike.png" "received" null
+[00:00:50.560] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/constatic.png" "received" null
+[00:00:50.587] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/nxjs.png" "received" null
+[00:00:51.217] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/modelfetch.png" "received" null
+[00:00:51.218] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/showcases/fashnai.png" "received" null
+[00:00:54.324] Server  WARN    GITHUB_TOKEN environment variable is required for fetching sponsors.
