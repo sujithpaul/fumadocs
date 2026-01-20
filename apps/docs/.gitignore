@@ -4,3 +4,8 @@ content/docs/openapi/**/*.mdx
 
 public/r
 public/registry
+
+# Build outputs and dependencies
+node_modules/
+.next/
+.turbo/
