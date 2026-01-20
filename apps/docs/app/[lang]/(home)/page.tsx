@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import HeroBg from '@/public/hero-bg.png';
 import { AudienceTabs } from './AudienceTabs';
+import Hero03 from '@/components/hero-03';
 import './mintlify.css';
 
 export default async function Page({
@@ -27,59 +28,7 @@ export default async function Page({
   return (
     <main className="mintlify-home">
       {/* Hero Section */}
-      <section className="mint-hero mint-hero-with-bg">
-        <div className="mint-hero-bg-image">
-          <Image
-            src={HeroBg}
-            alt=""
-            fill
-            className="object-cover"
-            priority
-            quality={90}
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="mint-hero-bg-overlay" />
-        </div>
-
-        <div className="relative z-10 max-w-[1200px] mx-auto pt-24">
-          <div className="mint-hero-badge">
-            <span>Trusted by 200+ therapy clinics</span>
-          </div>
-
-          <h1 className="mint-hero-title">
-            Run your therapy practice,
-            <br />
-            not paperwork
-          </h1>
-
-          <p className="mint-hero-subtitle">
-            Metanoa brings your client management, assessments, scheduling, and billing
-            into one simple platform. So you can focus on what matters — your clients.
-          </p>
-
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href={`/${lang}/docs`} className="mint-btn mint-btn-primary">
-              Book a Demo
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a
-              href="#features"
-              className="mint-btn mint-btn-secondary"
-            >
-              <Play className="w-4 h-4" />
-              See How It Works
-            </a>
-          </div>
-
-          {/* Browser Screenshot Placeholder */}
-          <div className="mint-browser-placeholder">
-            <div className="mint-browser-placeholder-inner">
-              <p>Add browser screenshot image here</p>
-              <p className="mint-browser-placeholder-hint">Place image at: /public/app-screenshot.png</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero03 />
 
       {/* Audience Section */}
       <section className="mint-audience-section">
