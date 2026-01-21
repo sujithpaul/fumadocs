@@ -74,71 +74,63 @@ const Features02 = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-6">
-      <div className="grow w-full max-w-5xl">
-        <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
-        Unified Platform for Behavioral Health Organizations, Group Practices and Solo Practitioners
-        </h2>
-        <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-          {features.map((feature, index) => {
-            return (
-              <div
-                key={feature.title}
-                className="flex flex-col text-start w-full group"
-              >
-                <div className="relative mb-5 sm:mb-6 w-full aspect-[4/5] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <Image
-                    src={images[index]}
-                    alt={feature.title}
-                    fill
-                    className="object-cover transition-transform duration-300 [transform:scale(var(--img-scale))] group-hover:[transform:scale(var(--img-hover-scale))]"
-                    style={
-                      {
-                        objectPosition: imageTweaks[index].objectPosition,
-                        ["--img-scale" as any]: imageTweaks[index].scale,
-                        ["--img-hover-scale" as any]: imageTweaks[index].hoverScale,
-                      } as React.CSSProperties
-                    }
-                    priority
-                    quality={90}
-                  />
-                  {/* Gradient overlay for better text readability */}
-                  <div className={`absolute inset-0 ${overlays[index]}`} />
-                  
-                  {/* Content overlay */}
-                  <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
-                    {/* Top section - Title and Description */}
-                    <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3 drop-shadow-lg">
-                        {feature.title}
-                      </h3>
-                      <p className="text-white/95 text-base sm:text-lg font-medium leading-relaxed max-w-[90%]">
-                        {feature.description}
-                      </p>
-                    </div>
-                    
-                    {/* Bottom section - Features list */}
-                    <div className="mt-auto pt-6">
-                      <ul className="space-y-2.5 text-white">
-                        {allFeatures[index].map((item, idx) => (
-                          <li
-                            key={idx}
-                            className="flex items-start gap-2.5 text-sm sm:text-base leading-relaxed"
-                          >
-                            <CircleCheck className="w-5 h-5 flex-shrink-0 mt-0.5 text-white drop-shadow-md" />
-                            <span className="text-white/95 font-medium">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+    <section className="py-20 px-6">
+      <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+        <div className="relative p-8 sm:p-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-[2.4rem] md:leading-[1.25] font-semibold tracking-tight text-balance mb-4">
+              Unified Platform for Behavioral Health Organizations, Group Practices and Solo Practitioners.
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => {
+              return (
+                <div
+                  key={feature.title}
+                  className="flex flex-col p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                >
+                  <div className="relative mb-4 w-full aspect-[4/3] rounded-lg overflow-hidden">
+                    <Image
+                      src={images[index]}
+                      alt={feature.title}
+                      fill
+                      className="object-cover"
+                      style={
+                        {
+                          objectPosition: imageTweaks[index].objectPosition,
+                        } as React.CSSProperties
+                      }
+                      priority
+                      quality={90}
+                    />
                   </div>
+                  
+                  <h3 className="text-xl font-semibold mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-white/80 mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  
+                  <ul className="space-y-2 mt-auto">
+                    {allFeatures[index].map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-sm text-white/75"
+                      >
+                        <CircleCheck className="w-4 h-4 flex-shrink-0 mt-0.5 text-white/80" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-            </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

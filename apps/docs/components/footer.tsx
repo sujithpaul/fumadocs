@@ -1,9 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import {
-  DribbbleIcon,
-  GithubIcon,
-  TwitchIcon,
-  TwitterIcon,
+  Facebook,
+  Instagram,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -83,17 +81,11 @@ const Footer = () => {
             </span>
 
             <div className="flex items-center gap-5 text-muted-foreground">
-              <Link href="#" target="_blank">
-                <TwitterIcon className="h-5 w-5" />
+              <Link href="#" target="_blank" aria-label="Facebook">
+                <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" target="_blank">
-                <DribbbleIcon className="h-5 w-5" />
-              </Link>
-              <Link href="#" target="_blank">
-                <TwitchIcon className="h-5 w-5" />
-              </Link>
-              <Link href="#" target="_blank">
-                <GithubIcon className="h-5 w-5" />
+              <Link href="#" target="_blank" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
               </Link>
             </div>
           </div>

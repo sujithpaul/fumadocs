@@ -13,7 +13,7 @@ const features = [
     icon: Building2,
     title: "Multi-Location Management",
     description:
-      "Manage all your clinic locations from one dashboard. Track performance, share resources, and maintain consistency across every site.",
+      "Manage all your clinic locations. Track performance, share resources, and maintain consistency across every site.",
   },
   {
     icon: ShieldCheck,
