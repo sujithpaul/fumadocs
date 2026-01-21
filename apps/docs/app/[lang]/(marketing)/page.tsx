@@ -13,8 +13,10 @@ import {
 import Hero03 from '@/components/hero-03';
 import Features02 from '@/components/features-02';
 import Features05 from '@/components/features-05';
+import Features04 from '@/components/features-04';
 import Pricing04 from '@/components/pricing-04';
 import { MarqueeDemo } from '@/components/marquee-demo';
+import Faq01 from '@/components/faq-01';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -38,6 +40,9 @@ export default async function MarketingPage({
       {/* Features 05 Section */}
       <Features05 />
 
+      {/* Features 04 Section (above pricing) */}
+      <Features04 />
+
       {/* Pricing Section */}
       <div id="pricing">
         <Pricing04 />
@@ -45,43 +50,6 @@ export default async function MarketingPage({
 
       {/* Marquee Section */}
       <MarqueeDemo />
-
-      {/* The Shift Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4">
-              The Shift
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-              Therapy practices have evolved
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              The best clinics have moved beyond spreadsheets and disconnected tools.
-              They&apos;re running smarter, serving clients better, and growing faster.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            <EvolutionCard
-              before="Paper forms and scattered files"
-              after="Digital assessments, instantly accessible"
-            />
-            <EvolutionCard
-              before="Manual goal tracking in notebooks"
-              after="Real-time progress dashboards"
-            />
-            <EvolutionCard
-              before="Phone calls and calendar conflicts"
-              after="Smart scheduling with auto-reminders"
-            />
-            <EvolutionCard
-              before="Hours compiling monthly reports"
-              after="One-click insights and analytics"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Platform Section */}
       <section id="features" className="py-20 px-6 bg-muted/50">
@@ -260,37 +228,7 @@ export default async function MarketingPage({
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-6 bg-muted/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">
-              Testimonials
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-              Trusted by therapy practices
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <TestimonialCard
-              quote="We cut our admin time in half. Now I spend my evenings with family, not paperwork."
-              name="Dr. Sarah Chen"
-              role="Clinical Director, Bright Futures OT"
-            />
-            <TestimonialCard
-              quote="The assessment builder is exactly what we needed. We finally have one system for everything."
-              name="Michael Torres"
-              role="Owner, Speak Easy Speech Therapy"
-            />
-            <TestimonialCard
-              quote="Onboarding our team was painless. The permission controls mean everyone sees only what they need."
-              name="Rachel Kim"
-              role="Practice Manager, Healing Hands PT"
-            />
-          </div>
-        </div>
-      </section>
+      <Faq01 />
 
       {/* CTA Section */}
       <section className="py-20 px-6">
@@ -339,60 +277,6 @@ function FeatureCard({
         </div>
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-sm text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
-  );
-}
-
-function EvolutionCard({ before, after }: { before: string; after: string }) {
-  return (
-    <Card>
-      <CardContent className="p-4 flex items-center gap-4">
-        <div className="flex-1 text-center">
-          <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-            Before
-          </div>
-          <p className="text-sm text-muted-foreground line-through opacity-70">
-            {before}
-          </p>
-        </div>
-        <ArrowRight className="w-5 h-5 text-primary flex-shrink-0" />
-        <div className="flex-1 text-center">
-          <div className="text-xs uppercase tracking-wide text-primary mb-1">
-            Now
-          </div>
-          <p className="text-sm font-medium">{after}</p>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-function TestimonialCard({
-  quote,
-  name,
-  role,
-}: {
-  quote: string;
-  name: string;
-  role: string;
-}) {
-  return (
-    <Card className="hover:border-primary/50 transition-colors">
-      <CardContent className="p-6">
-        <p className="text-sm italic mb-4">&ldquo;{quote}&rdquo;</p>
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-semibold">
-            {name
-              .split(' ')
-              .map((n) => n[0])
-              .join('')}
-          </div>
-          <div>
-            <p className="text-sm font-semibold">{name}</p>
-            <p className="text-xs text-muted-foreground">{role}</p>
-          </div>
-        </div>
       </CardContent>
     </Card>
   );

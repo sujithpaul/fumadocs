@@ -1,58 +1,58 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
-  BookCheck,
-  ChartPie,
-  FolderSync,
-  Goal,
-  Users,
-  Zap,
+  Building2,
+  ShieldCheck,
+  BarChart3,
+  CalendarDays,
+  ClipboardList,
+  Target,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Goal,
-    title: "Identify Opportunities",
+    icon: Building2,
+    title: "Multi-Location Management",
     description:
-      "Easily uncover untapped areas to explore and expand your reach effortlessly.",
+      "Manage all your clinic locations from one dashboard. Track performance, share resources, and maintain consistency across every site.",
   },
   {
-    icon: BookCheck,
-    title: "Build Authority",
+    icon: ShieldCheck,
+    title: "Team Roles & Permissions",
     description:
-      "Create valuable content that resonates, inspires trust, and positions you as an expert.",
+      "Control exactly who sees what. Assign roles to therapists, admins, and supervisors with granular access controls built for HIPAA compliance.",
   },
   {
-    icon: ChartPie,
-    title: "Instant Insights",
+    icon: BarChart3,
+    title: "Real-Time Analytics",
     description:
-      "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
+      "Know the pulse of your business instantly. Revenue trends, session utilization, and client outcomes—all in one place for smarter decisions.",
   },
   {
-    icon: Users,
-    title: "Engage with Your Audience",
+    icon: CalendarDays,
+    title: "Smart Scheduling",
     description:
-      "Boost audience engagement with interactive features like polls, quizzes, and forms.",
+      "A calendar built for therapy practices. Manage availability, reduce no-shows with auto-reminders, and handle recurring sessions effortlessly.",
   },
   {
-    icon: FolderSync,
-    title: "Automate Your Workflow",
+    icon: ClipboardList,
+    title: "Clinical Assessments",
     description:
-      "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
+      "Comprehensive assessment tools for every therapy type. Standardized templates, custom forms, and digital documentation that saves hours.",
   },
   {
-    icon: Zap,
-    title: "Accelerate Growth",
+    icon: Target,
+    title: "Goals, Sessions & Reports",
     description:
-      "Supercharge your growth by implementing strategies that drive results quickly and efficiently.",
+      "Track client progress with our goal bank. Document sessions with SOAP notes and generate professional reports families and payers trust.",
   },
 ];
 
 const Features05 = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-6xl w-full py-10 px-6">
+    <div className="min-h-screen flex items-center justify-center py-10 px-6">
+      <div className="max-w-6xl w-full">
         <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
-        One connected platform that brings your entire practice together. 
+        One connected platform that brings your entire practice management together. 
         </h2>
         <div className="mt-10 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {features.map((feature) => (

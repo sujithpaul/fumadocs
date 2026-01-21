@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
@@ -24,21 +23,12 @@ export default function Hero03() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-3xl">
-        <Badge
-          variant="secondary"
-          className="rounded-full py-1 border-border"
-        >
-          <Link href="#" className="inline-flex items-center">
-            Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
-          </Link>
-        </Badge>
+      <div className="relative z-10 text-center max-w-4xl">
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:leading-[1.2] font-semibold tracking-tighter">
           Therapy practice management has evolved
         </h1>
-        <p className="mt-6 md:text-lg text-foreground/80">
-          Modern clinics left behind the old tools and workflows.
-          Now they&apos;re growing faster while working less.
+        <p className="mt-6 text-lg md:text-xl text-foreground/80 text-balance">
+        Leading practices have abandoned generic EMRs for platforms that understand clinical workflows and do the heavy lifting.
         </p>
         <div className="mt-10 flex items-center justify-center gap-4">
           <Button size="lg" className="rounded-full text-base" asChild>
@@ -58,7 +48,7 @@ export default function Hero03() {
           </Button>
         </div>
       </div>
-      <div className="relative z-10 w-full max-w-7xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl">
+      <div className="relative z-10 w-full max-w-6xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl">
         <Image
           src={HeroImage}
           alt="Hero showcase"

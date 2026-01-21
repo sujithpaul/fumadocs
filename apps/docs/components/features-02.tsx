@@ -6,7 +6,7 @@ import ClinicAdminImg from "@/public/blog/Clinic_Admin.png";
 
 const features = [
   {
-    title: "Clinic Owners",
+    title: "Owners",
     description: "Grow your practice with confidence",
   },
   {
@@ -14,7 +14,7 @@ const features = [
     description: "Focus on therapy, not paperwork",
   },
   {
-    title: "Clinic Admins",
+    title: "Administrators",
     description: "Tools to streamline daily operations",
   },
 ];
@@ -55,9 +55,9 @@ const Features02 = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-6">
-      <div className="grow w-full sm:max-w-md lg:max-w-6xl">
-        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-        Built for everyone in your practice
+      <div className="grow w-full max-w-6xl">
+        <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
+          Metanoa is built for everyone in your practice
         </h2>
         <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {features.map((feature, index) => {

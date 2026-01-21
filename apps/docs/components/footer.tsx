@@ -37,7 +37,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer className="border-t mt-auto">
-        <div className="max-w-(--breakpoint-xl) mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="py-12 flex flex-col justify-start items-center">
             {/* Logo */}
             <svg
