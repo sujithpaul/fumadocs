@@ -1,10 +1,10 @@
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import HeroBg from "@/public/hero-bg.png";
-import { cn } from "@/lib/cn";
+import HeroImage from "@/public/hero-image.png";
 
 export default function Hero03() {
   return (
@@ -25,41 +25,50 @@ export default function Hero03() {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl">
-        <Link href="#">
-          <Badge
-            variant="secondary"
-            className="rounded-full py-1 border-border"
-          >
+        <Badge
+          variant="secondary"
+          className="rounded-full py-1 border-border"
+        >
+          <Link href="#" className="inline-flex items-center">
             Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
-          </Badge>
-        </Link>
+          </Link>
+        </Badge>
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:leading-[1.2] font-semibold tracking-tighter">
-          Customized Shadcn UI Blocks & Components
+          Therapy practice management has evolved
         </h1>
         <p className="mt-6 md:text-lg text-foreground/80">
-          Explore a collection of Shadcn UI blocks and components, ready to
-          preview and copy. Streamline your development workflow with
-          easy-to-implement examples.
+          Modern clinics left behind the old tools and workflows.
+          Now they&apos;re growing faster while working less.
         </p>
         <div className="mt-10 flex items-center justify-center gap-4">
-          <Link
-            href="#"
-            className={cn(buttonVariants({ size: "lg" }), "rounded-full text-base")}
+          <Button size="lg" className="rounded-full text-base" asChild>
+            <Link href="#">
+              Get Started <ArrowUpRight className="!h-5 !w-5" />
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full text-base shadow-none"
+            asChild
           >
-            Get Started <ArrowUpRight className="h-5 w-5 ml-1" />
-          </Link>
-          <Link
-            href="#"
-            className={cn(
-              buttonVariants({ variant: "outline", size: "lg" }),
-              "rounded-full text-base shadow-none"
-            )}
-          >
-            <CirclePlay className="h-5 w-5 mr-2" /> Watch Demo
-          </Link>
+            <Link href="#">
+              <CirclePlay className="!h-5 !w-5" /> Watch Demo
+            </Link>
+          </Button>
         </div>
       </div>
-      <div className="relative z-10 w-full max-w-7xl mx-auto aspect-video bg-accent/20 rounded-xl border" />
+      <div className="relative z-10 w-full max-w-7xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl">
+        <Image
+          src={HeroImage}
+          alt="Hero showcase"
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'top' }}
+          priority
+          quality={90}
+        />
+      </div>
     </div>
   );
 }

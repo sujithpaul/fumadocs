@@ -1,0 +1,163 @@
+"use client";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { cn } from "@/lib/cn";
+import { ArrowUpRight, CircleCheck, CircleHelp } from "lucide-react";
+import { useState } from "react";
+
+const tooltipContent = {
+  styles: "Choose from a variety of styles to suit your preferences.",
+  filters: "Choose from a variety of filters to enhance your portraits.",
+  credits: "Use these credits to retouch your portraits.",
+};
+
+const YEARLY_DISCOUNT = 20;
+const plans = [
+  {
+    name: "Starter",
+    price: 20,
+    description:
+      "Get 20 AI-generated portraits with 2 unique styles and filters.",
+    features: [
+      { title: "5 hours turnaround time" },
+      { title: "20 AI portraits" },
+      { title: "Choice of 2 styles", tooltip: tooltipContent.styles },
+      { title: "Choice of 2 filters", tooltip: tooltipContent.filters },
+      { title: "2 retouch credits", tooltip: tooltipContent.credits },
+    ],
+  },
+  {
+    name: "Advanced",
+    price: 40,
+    isRecommended: true,
+    description:
+      "Get 50 AI-generated portraits with 5 unique styles and filters.",
+    features: [
+      { title: "3 hours turnaround time" },
+      { title: "50 AI portraits" },
+      { title: "Choice of 5 styles", tooltip: tooltipContent.styles },
+      { title: "Choice of 5 filters", tooltip: tooltipContent.filters },
+      { title: "5 retouch credits", tooltip: tooltipContent.credits },
+    ],
+    isPopular: true,
+  },
+  {
+    name: "Premium",
+    price: 80,
+    description:
+      "Get 100 AI-generated portraits with 10 unique styles and filters.",
+    features: [
+      { title: "1-hour turnaround time" },
+      { title: "100 AI portraits" },
+      { title: "Choice of 10 styles", tooltip: tooltipContent.styles },
+      { title: "Choice of 10 filters", tooltip: tooltipContent.filters },
+      { title: "10 retouch credits", tooltip: tooltipContent.credits },
+    ],
+  },
+];
+
+const Pricing04 = () => {
+  const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
+
+  return (
+    <TooltipProvider>
+      <div className="min-h-screen bg-accent flex flex-col items-center justify-center py-12 px-6">
+      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+        Our Plans
+      </h2>
+      <p className="mt-3 text-xl text-center text-muted-foreground">
+        Choose the plan that fits your needs and get started today
+      </p>
+
+      <Tabs
+        value={selectedBillingPeriod}
+        onValueChange={setSelectedBillingPeriod}
+        className="mt-8"
+      >
+        <TabsList className="h-11 bg-background border rounded-full p-1">
+          <TabsTrigger
+            value="monthly"
+            className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          >
+            Monthly
+          </TabsTrigger>
+          <TabsTrigger
+            value="yearly"
+            className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          >
+            Yearly (Save {YEARLY_DISCOUNT}%)
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+      <div className="mt-12 sm:mt-16 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
+        {plans.map((plan) => (
+          <div
+            key={plan.name}
+            className={cn(
+              "relative p-6 bg-background border px-8 rounded-lg",
+              plan.isPopular &&
+                "shadow-[0px_2px_12px_0px_rgba(0,0,0,0.07)] py-14 z-[1] px-10 lg:-mx-2 overflow-hidden"
+            )}
+          >
+            {plan.isPopular && (
+              <Badge className="absolute top-0 right-0 rounded-none px-5 py-1 uppercase rounded-bl-lg">
+                Most Popular
+              </Badge>
+            )}
+            <h3 className="text-lg font-medium">{plan.name}</h3>
+            <p className="mt-2 text-4xl font-semibold">
+              $
+              {selectedBillingPeriod === "monthly"
+                ? plan.price
+                : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
+              <span className="ml-1.5 text-sm text-muted-foreground font-normal">
+                /month
+              </span>
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              {plan.description}
+            </p>
+
+            <Button
+              variant={plan.isPopular ? "default" : "outline"}
+              size="lg"
+              className="w-full mt-6 rounded-full text-base"
+            >
+              Get Started <ArrowUpRight className="w-4 h-4" />
+            </Button>
+            <Separator className="my-8" />
+            <ul className="space-y-3">
+              {plan.features.map((feature) => (
+                <li key={feature.title} className="flex items-start gap-1.5">
+                  <CircleCheck className="h-4 w-4 mt-1 text-green-600" />
+                  {feature.title}
+                  {feature.tooltip && (
+                    <Tooltip>
+                      <TooltipTrigger className="cursor-help">
+                        <CircleHelp className="h-4 w-4 mt-1 text-gray-500" />
+                      </TooltipTrigger>
+                      <TooltipContent>{feature.tooltip}</TooltipContent>
+                    </Tooltip>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+    </TooltipProvider>
+  );
+};
+
+export default Pricing04;
+

@@ -24,9 +24,15 @@ interface NavbarProps {
 function getNavbarLinks(lang: string) {
   return [
     {
+      type: 'link' as const,
+      on: 'nav' as const,
+      text: 'Home',
+      url: `/${lang}`,
+    },
+    {
       type: 'menu' as const,
       on: 'menu' as const,
-      text: 'Documentation',
+      text: 'Help Docs',
       items: [
         {
           text: 'Getting Started',
@@ -46,7 +52,7 @@ function getNavbarLinks(lang: string) {
       children: (
         <NavbarMenu>
           <NavbarMenuTrigger>
-            <Link href={`/${lang}/docs`}>Documentation</Link>
+            <Link href={`/${lang}/docs`}>Help Docs</Link>
           </NavbarMenuTrigger>
           <NavbarMenuContent>
             <NavbarMenuLink href={`/${lang}/docs`} className="md:row-span-2">
@@ -116,7 +122,7 @@ export function Navbar({ lang, hideOnMobile = false }: NavbarProps) {
     <HomeLayout
       {...baseOptions()}
       links={getNavbarLinks(lang)}
-      className={`!flex-none dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)] [--color-fd-primary:var(--color-brand)] ${hideOnMobile ? 'max-md:hidden' : ''}`}
+      className={`!flex-none dark:bg-background [--color-fd-primary:var(--color-brand)] ${hideOnMobile ? 'max-md:hidden' : ''}`}
     />
   );
 }

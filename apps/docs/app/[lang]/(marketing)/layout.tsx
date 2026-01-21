@@ -11,7 +11,7 @@ import Image from 'next/image';
 import Preview from '@/public/banner.png';
 import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
 
-export default async function Layout({
+export default async function MarketingLayout({
   params,
   children,
 }: LayoutProps<'/[lang]'>) {
@@ -61,7 +61,7 @@ export default async function Layout({
                   <div className="-mx-3 -mt-3">
                     <Image
                       src={Preview}
-                      alt="Perview"
+                      alt="Preview"
                       className="rounded-t-lg object-cover"
                       style={{
                         maskImage: 'linear-gradient(to bottom,white 60%,transparent)',
