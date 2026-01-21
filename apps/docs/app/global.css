@@ -160,7 +160,7 @@ body {
 }
 
 .dark body {
-  background-color: hsl(0 0% 3.9%) !important;
+  background-color: hsl(160 30% 5%) !important;
 }
 
 /* Force navbar transparent on home page */
@@ -169,60 +169,65 @@ body {
   background-color: transparent !important;
 }
 
+/* Remove bottom border from header on home page */
+#nd-home-layout header#nd-nav {
+  border-bottom: none !important;
+}
+
 .dark {
-  /* Override Fumadocs primary to follow shadcn dark theme */
-  /* shadcn dark: --primary: 0 0% 98%; --primary-foreground: 0 0% 9%; */
-  --color-fd-primary: hsl(0 0% 98%) !important;
-  --color-fd-primary-foreground: hsl(0 0% 9%) !important;
+  /* CareStack-inspired sage/teal dark theme */
+  /* Primary buttons: bright teal on dark */
+  --color-fd-primary: hsl(155 55% 48%) !important;
+  --color-fd-primary-foreground: hsl(160 30% 5%) !important;
 
-  /* Override ALL Fumadocs colors to use shadcn dark theme (removes blue tint) */
-  --color-fd-background: hsl(0 0% 3.9%) !important;
-  --color-fd-foreground: hsl(0 0% 98%) !important;
-  --color-fd-muted: hsl(0 0% 14.9%) !important;
-  --color-fd-muted-foreground: hsl(0 0% 63.9%) !important;
-  --color-fd-popover: hsl(0 0% 3.9%) !important;
-  --color-fd-popover-foreground: hsl(0 0% 98%) !important;
-  --color-fd-card: hsl(0 0% 3.9%) !important;
-  --color-fd-card-foreground: hsl(0 0% 98%) !important;
-  --color-fd-border: hsl(0 0% 14.9%) !important;
-  --color-fd-secondary: hsl(0 0% 14.9%) !important;
-  --color-fd-secondary-foreground: hsl(0 0% 98%) !important;
-  --color-fd-accent: hsl(0 0% 14.9%) !important;
-  --color-fd-accent-foreground: hsl(0 0% 98%) !important;
-  --color-fd-ring: hsl(0 0% 63.9%) !important;
+  /* Override ALL Fumadocs colors with green-tinted dark theme */
+  --color-fd-background: hsl(160 30% 5%) !important;
+  --color-fd-foreground: hsl(140 20% 95%) !important;
+  --color-fd-muted: hsl(160 25% 12%) !important;
+  --color-fd-muted-foreground: hsl(145 15% 60%) !important;
+  --color-fd-popover: hsl(160 28% 7%) !important;
+  --color-fd-popover-foreground: hsl(140 20% 95%) !important;
+  --color-fd-card: hsl(160 28% 7%) !important;
+  --color-fd-card-foreground: hsl(140 20% 95%) !important;
+  --color-fd-border: hsl(160 20% 18%) !important;
+  --color-fd-secondary: hsl(160 25% 15%) !important;
+  --color-fd-secondary-foreground: hsl(140 20% 95%) !important;
+  --color-fd-accent: hsl(155 30% 14%) !important;
+  --color-fd-accent-foreground: hsl(140 20% 95%) !important;
+  --color-fd-ring: hsl(155 40% 50%) !important;
 
-  --headless-color: hsl(250 100% 80%);
-  --framework-color: #fff383;
-  --ui-color: #a9ceff;
+  --headless-color: hsl(155 60% 70%);
+  --framework-color: hsl(145 50% 75%);
+  --ui-color: hsl(165 50% 70%);
 
-  /* Standard shadcn CSS variables for dark mode */
-  --background: hsl(0 0% 3.9%);
-  --foreground: hsl(0 0% 98%);
-  --primary: hsl(0 0% 98%);
-  --primary-foreground: hsl(0 0% 9%);
-  --secondary: hsl(0 0% 14.9%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --muted: hsl(0 0% 14.9%);
-  --muted-foreground: hsl(0 0% 63.9%);
-  --accent: hsl(0 0% 14.9%);
-  --accent-foreground: hsl(0 0% 98%);
+  /* Standard shadcn CSS variables for dark mode - sage/teal tinted */
+  --background: hsl(160 30% 5%);
+  --foreground: hsl(140 20% 95%);
+  --primary: hsl(155 55% 48%);
+  --primary-foreground: hsl(160 30% 5%);
+  --secondary: hsl(160 25% 15%);
+  --secondary-foreground: hsl(140 20% 95%);
+  --muted: hsl(160 25% 12%);
+  --muted-foreground: hsl(145 15% 60%);
+  --accent: hsl(155 30% 14%);
+  --accent-foreground: hsl(140 20% 95%);
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(0 0% 14.9%);
-  --input: hsl(0 0% 14.9%);
-  --ring: hsl(0 0% 83.1%);
-  --card: hsl(0 0% 3.9%);
-  --card-foreground: hsl(0 0% 98%);
-  --popover: hsl(0 0% 3.9%);
-  --popover-foreground: hsl(0 0% 98%);
+  --border: hsl(160 20% 18%);
+  --input: hsl(160 20% 18%);
+  --ring: hsl(155 40% 50%);
+  --card: hsl(160 28% 7%);
+  --card-foreground: hsl(140 20% 95%);
+  --popover: hsl(160 28% 7%);
+  --popover-foreground: hsl(140 20% 95%);
 }
 
 /* Override section-specific classes in dark mode too */
 .dark .ui,
 .dark .headless,
 .dark .framework {
-  --color-fd-primary: hsl(0 0% 98%);
-  --color-fd-primary-foreground: hsl(0 0% 9%);
+  --color-fd-primary: hsl(155 55% 48%);
+  --color-fd-primary-foreground: hsl(160 30% 5%);
 }
 
 @keyframes circuit_1 {

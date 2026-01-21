@@ -55,7 +55,7 @@ const features = [
 export default function Features04() {
   return (
     <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
           Built-in advantages for modern practices
         </h2>

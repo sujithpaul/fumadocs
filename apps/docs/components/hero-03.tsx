@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import HeroBg from "@/public/hero-bg.png";
@@ -33,17 +33,7 @@ export default function Hero03() {
         <div className="mt-10 flex items-center justify-center gap-4">
           <Button size="lg" className="rounded-full text-base" asChild>
             <Link href="#">
-              Get Started <ArrowUpRight className="!h-5 !w-5" />
-            </Link>
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full text-base shadow-none"
-            asChild
-          >
-            <Link href="#">
-              <CirclePlay className="!h-5 !w-5" /> Watch Demo
+              Start Now <ArrowUpRight className="!h-5 !w-5" />
             </Link>
           </Button>
         </div>

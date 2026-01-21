@@ -10,6 +10,7 @@ import Link from 'fumadocs-core/link';
 import Image from 'next/image';
 import Preview from '@/public/banner.png';
 import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
+import { EnsureLightMode } from './ensure-light.client';
 
 export default async function Layout({
   params,
@@ -18,7 +19,9 @@ export default async function Layout({
   const { lang } = await params;
   const base = baseOptions();
   return (
-    <HomeLayout
+    <>
+      <EnsureLightMode />
+      <HomeLayout
       {...base}
       nav={{
         ...base.nav,
@@ -26,7 +29,7 @@ export default async function Layout({
       }}
       links={[
         {
-          type: 'link',
+          type: 'main',
           on: 'nav',
           text: 'Home',
           url: `/${lang}`,
@@ -123,5 +126,6 @@ export default async function Layout({
     >
       {children}
     </HomeLayout>
+    </>
   );
 }

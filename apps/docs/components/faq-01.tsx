@@ -1,28 +1,43 @@
 const faq = [
   {
-    question: "What is your return policy?",
+    question: "1. What types of therapy practices does Metanoa support?",
     answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+      "Metanoa works for occupational therapy, speech therapy, physical therapy, ABA, and other behavioral health services. Whether you're a solo practitioner or a multi-location organization, the platform adapts to your discipline and workflows.",
   },
   {
-    question: "How do I track my order?",
+    question: "2. Is Metanoa HIPAA compliant?",
     answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+      "Absolutely. Metanoa is fully HIPAA compliant with encrypted data storage, secure access controls and audit logs. We take client privacy and data security seriously.",
   },
   {
-    question: "Do you ship internationally?",
+    question: "3. Can therapists access Metanoa on mobile devices?",
     answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+      "Yes. Metanoa is fully responsive and works on phones and tablets. Therapists can document sessions, check schedules, and access client information from any device—perfect for home visits or between appointments.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "4. What kind of reports can I generate?",
     answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+      "You can create progress reports, therapy plans, discharge summaries, and custom reports for schools, insurance companies, or families. All reports are customizable to match your format requirements and clinic branding.",
   },
   {
-    question: "What if I receive a damaged item?",
+    question: "5. How much training is required to get started?",
     answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+      "Most teams are up and running within a week. We provide onboarding sessions, video tutorials, and ongoing support. The interface is intuitive enough that therapists who aren't tech-savvy can navigate it comfortably.",
+  },
+  {
+    question: "6. Can I manage multiple locations from one account?",
+    answer:
+      "Yes. You can oversee all your clinic locations from a single dashboard, track performance across sites, manage staff schedules, and maintain consistent documentation standards while allowing each location appropriate autonomy.",
+  },
+  {
+    question: "7. What happens to my data if I cancel?",
+    answer:
+      "You own your data. If you decide to leave Metanoa, we provide a complete export of your client records, session notes, and documentation in standard formats. There are no lock-ins.",
+  },
+  {
+    question: "8. Do you offer a free trial or demo?",
+    answer:
+      "We offer personalized demos where we walk you through the platform based on your specific practice needs. This helps you see exactly how Metanoa would work for your workflows before committing. Contact us to schedule a demo with our team.",
   },
 ];
 

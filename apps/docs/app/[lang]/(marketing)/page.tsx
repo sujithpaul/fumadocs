@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {
   ArrowRight,
+  ArrowUpRight,
   CheckCircle2,
   ClipboardCheck,
   Target,
@@ -9,12 +10,15 @@ import {
   Building2,
   Shield,
   BarChart3,
+  HeartHandshake,
+  Settings,
+  FileEdit,
+  Layers,
 } from 'lucide-react';
 import Hero03 from '@/components/hero-03';
 import Features02 from '@/components/features-02';
 import AiWorkflow from '@/components/ai-workflow';
 import Features05 from '@/components/features-05';
-import Features04 from '@/components/features-04';
 import Pricing04 from '@/components/pricing-04';
 import { MarqueeDemo } from '@/components/marquee-demo';
 import Faq01 from '@/components/faq-01';
@@ -38,26 +42,82 @@ export default async function MarketingPage({
       {/* Features Section */}
       <Features02 />
 
+      {/* Marquee Section */}
+      <MarqueeDemo />
+
       {/* AI Workflow Highlight */}
       <AiWorkflow />
 
       {/* Features 05 Section */}
       <Features05 />
 
-      {/* Features 04 Section (above pricing) */}
-      <Features04 />
+      {/* Customization Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+          <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+                <Settings className="h-4 w-4 text-white/80" />
+                <span>Fully Customizable</span>
+              </div>
+              <h2 className="mt-4 text-3xl sm:text-4xl md:text-[2.4rem] md:leading-[1.25] font-semibold tracking-tight text-balance">
+                Your processes. Your formats.
+              </h2>
+              <p className="mt-4 text-base sm:text-lg text-white/80">
+                Every therapy practice runs differently. Some use standardized assessments, others build their own. 
+                Some bill insurance, others work with schools. Metanoa adapts to how you already work—you&apos;re not 
+                locked into someone else&apos;s idea of the &quot;right&quot; process.
+              </p>
 
-      {/* Pricing Section */}
-      <div id="pricing">
-        <Pricing04 />
-      </div>
+              <dl className="mt-8 space-y-4 text-sm sm:text-base">
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <ClipboardCheck className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Assessment forms that fit your discipline</p>
+                    <p className="text-white/75">
+                      Create forms specific to your therapy type. Add the fields you actually use, skip the ones you don&apos;t. 
+                      Speech pathology looks different from OT—your forms should too.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <FileText className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Reports formatted for who needs them</p>
+                    <p className="text-white/75">
+                      Insurance companies want one thing, schools want another, parents want something else entirely. 
+                      Build report templates for each audience instead of trying to make one format work for everyone.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <Layers className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Templates to get you started</p>
+                    <p className="text-white/75">
+                      We include ready-made assessments and reports for common therapy types. Use them as-is or customize them. 
+                      Either way, you&apos;re not starting from scratch.
+                    </p>
+                  </dd>
+                </div>
+              </dl>
+            </div>
 
-      {/* Marquee Section */}
-      <MarqueeDemo />
+            {/* Right side with gradient background */}
+            <div className="hidden md:block bg-gradient-to-br from-amber-500/20 via-orange-500/15 to-red-500/20 rounded-xl" />
+          </div>
+        </div>
+      </section>
 
       {/* Platform Section */}
       <section id="features" className="py-20 px-6 bg-muted/50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">
               The Platform
@@ -107,93 +167,140 @@ export default async function MarketingPage({
       </section>
 
       {/* Insights Section */}
-      <section className="py-20 px-6 bg-muted/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge variant="secondary" className="mb-4">
-                The Insights
-              </Badge>
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+          <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+                <BarChart3 className="h-4 w-4 text-white/80" />
+                <span>The Insights</span>
+              </div>
+              <h2 className="mt-4 text-3xl sm:text-4xl md:text-[2.4rem] md:leading-[1.25] font-semibold tracking-tight text-balance">
                 See your practice clearly
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-base sm:text-lg text-white/80">
                 Modern practices run on data. Know exactly where you stand with
                 real-time dashboards and actionable insights.
               </p>
-              <ul className="mt-6 space-y-3">
-                <CheckItem>Revenue trends at a glance</CheckItem>
-                <CheckItem>Client outcome tracking</CheckItem>
-                <CheckItem>Team performance visibility</CheckItem>
-                <CheckItem>Automated billing & claims</CheckItem>
-              </ul>
+
+              <dl className="mt-8 space-y-4 text-sm sm:text-base">
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <BarChart3 className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Revenue trends at a glance</p>
+                    <p className="text-white/75">
+                      Track your practice&apos;s financial health with real-time revenue dashboards and trend analysis.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <Target className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Client outcome tracking</p>
+                    <p className="text-white/75">
+                      Monitor client progress and outcomes to demonstrate the value of your therapy services.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <Building2 className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Team performance visibility</p>
+                    <p className="text-white/75">
+                      Get insights into team productivity, caseloads, and performance metrics across all locations.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <FileText className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Automated billing & claims</p>
+                    <p className="text-white/75">
+                      Streamline your billing process with automated claim generation and tracking to reduce administrative overhead.
+                    </p>
+                  </dd>
+                </div>
+              </dl>
             </div>
-            <div className="flex justify-center">
-              <Card className="w-full max-w-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 font-semibold mb-6 pb-4 border-b">
-                    <BarChart3 className="w-5 h-5" />
-                    <span>Practice Overview</span>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">847</div>
-                      <div className="text-xs text-muted-foreground">Active Clients</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">94%</div>
-                      <div className="text-xs text-muted-foreground">Goal Progress</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary">$127K</div>
-                      <div className="text-xs text-muted-foreground">This Month</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+
+            {/* Right side with gradient background */}
+            <div className="hidden md:block bg-gradient-to-br from-blue-500/20 via-cyan-500/15 to-teal-500/20 rounded-xl" />
           </div>
         </div>
       </section>
 
       {/* Specialized Section */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center md:order-first">
-              <Card className="w-full max-w-sm bg-gradient-to-br from-primary/10 to-primary/5">
-                <CardContent className="p-6">
-                  <Badge className="mb-4">EIP Module</Badge>
-                  <h4 className="text-lg font-semibold mb-2">
-                    Early Intervention Programs
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    Purpose-built tools for running early intervention services. Manage IFSP goals, track developmental milestones, and coordinate with families.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div>
-              <Badge variant="secondary" className="mb-4">
-                Specialized
-              </Badge>
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+          <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+                <HeartHandshake className="h-4 w-4 text-white/80" />
+                <span>Early Intervention</span>
+              </div>
+              <h2 className="mt-4 text-3xl sm:text-4xl md:text-[2.4rem] md:leading-[1.25] font-semibold tracking-tight text-balance">
                 Ready for Early Intervention
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-base sm:text-lg text-white/80">
                 Running an EIP program? Metanoa has a dedicated module for early intervention
                 services with everything you need to stay compliant and effective.
               </p>
-              <ul className="mt-6 space-y-3">
-                <CheckItem>IFSP goal management</CheckItem>
-                <CheckItem>Developmental milestone tracking</CheckItem>
-                <CheckItem>Family coordination tools</CheckItem>
-                <CheckItem>Compliance documentation</CheckItem>
-              </ul>
+
+              <dl className="mt-8 space-y-4 text-sm sm:text-base">
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <Target className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">IFSP goal management</p>
+                    <p className="text-white/75">
+                      Track and manage Individualized Family Service Plan goals with built-in compliance tools.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <ClipboardCheck className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Developmental milestone tracking</p>
+                    <p className="text-white/75">
+                      Monitor progress against developmental milestones and generate reports for families and payers.
+                    </p>
+                  </dd>
+                </div>
+                <div className="flex gap-3">
+                  <dt className="mt-1">
+                    <Building2 className="h-5 w-5 text-white/80" />
+                  </dt>
+                  <dd>
+                    <p className="font-medium">Family coordination tools</p>
+                    <p className="text-white/75">
+                      Keep families informed and engaged with secure portals and communication tools built for EIP workflows.
+                    </p>
+                  </dd>
+                </div>
+              </dl>
             </div>
+
+            {/* Right side with gradient background */}
+            <div className="hidden md:block bg-gradient-to-br from-emerald-500/20 via-teal-500/15 to-cyan-500/20 rounded-xl" />
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <div id="pricing">
+        <Pricing04 />
+      </div>
 
       <Faq01 />
 
@@ -208,14 +315,10 @@ export default async function MarketingPage({
             See Metanoa in action with a personalized demo.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" className="rounded-full text-base" asChild>
               <Link href={`/${lang}/docs`}>
-                Book a Demo
-                <ArrowRight className="w-4 h-4 ml-2" />
+                Start Now <ArrowUpRight className="!h-5 !w-5" />
               </Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href={`/${lang}/docs`}>View Pricing</Link>
             </Button>
           </div>
         </div>

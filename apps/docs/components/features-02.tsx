@@ -75,9 +75,9 @@ const Features02 = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-6">
-      <div className="grow w-full max-w-6xl">
+      <div className="grow w-full max-w-5xl">
         <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
-          Built for everyone in your practice
+        Unified Platform for Behavioral Health Organizations, Group Practices and Solo Practitioners
         </h2>
         <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {features.map((feature, index) => {

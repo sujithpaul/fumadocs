@@ -55,7 +55,17 @@ export default async function Layout({
   return (
     <NextProvider>
       <TreeContextProvider tree={source.getPageTree(lang)}>
-        <RootProvider i18n={provider(lang)} search={searchConfig}>
+        <RootProvider
+          i18n={provider(lang)}
+          search={searchConfig}
+          theme={{
+            // Default all pages to light mode (homepage overrides this with forced dark)
+            defaultTheme: 'light',
+            enableSystem: false,
+            // Use a separate storage key to avoid conflicts with forced dark theme
+            storageKey: 'fumadocs-theme',
+          }}
+        >
           <Provider>{children}</Provider>
         </RootProvider>
       </TreeContextProvider>

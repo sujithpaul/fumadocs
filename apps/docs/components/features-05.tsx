@@ -59,9 +59,9 @@ const previewColors = [
 const Features05 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center py-10 px-6">
-      <div className="max-w-6xl w-full">
+      <div className="max-w-5xl w-full">
         <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
-        One connected platform that brings your entire practice management together. 
+        Your entire workflow in one system. Across locations. 
         </h2>
         <div className="mt-10 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {features.map((feature, index) => (
