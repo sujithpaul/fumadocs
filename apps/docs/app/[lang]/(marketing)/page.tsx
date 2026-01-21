@@ -52,7 +52,7 @@ export default async function MarketingPage({
       <Features05 />
 
       {/* Owners Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative p-8 sm:p-12">
             <div className="text-center mb-12">
@@ -150,7 +150,7 @@ export default async function MarketingPage({
       </section>
 
       {/* Insights Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
             <div className="max-w-xl">
@@ -224,7 +224,7 @@ export default async function MarketingPage({
       <MarqueeDemo />
 
       {/* Therapy-Focused Platform Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative p-8 sm:p-12">
           <div className="text-center mb-12">
@@ -323,7 +323,7 @@ export default async function MarketingPage({
       </section>
 
       {/* Customization Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
             <div className="max-w-xl">
@@ -387,7 +387,7 @@ export default async function MarketingPage({
       </section>
 
       {/* Administrators Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative p-8 sm:p-12">
             <div className="text-center mb-12">
@@ -485,7 +485,7 @@ export default async function MarketingPage({
       </section>
 
       {/* Specialized Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
             <div className="max-w-xl">
@@ -552,7 +552,7 @@ export default async function MarketingPage({
       <Faq01 />
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-muted">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
             Ready to simplify your practice?

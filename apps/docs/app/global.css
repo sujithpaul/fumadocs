@@ -183,16 +183,16 @@ body {
   /* Override ALL Fumadocs colors with green-tinted dark theme */
   --color-fd-background: hsl(160 30% 5%) !important;
   --color-fd-foreground: hsl(140 20% 95%) !important;
-  --color-fd-muted: hsl(160 25% 12%) !important;
+  --color-fd-muted: hsl(155 25% 16%) !important;
   --color-fd-muted-foreground: hsl(145 15% 60%) !important;
-  --color-fd-popover: hsl(160 28% 7%) !important;
+  --color-fd-popover: hsl(160 35% 6%) !important;
   --color-fd-popover-foreground: hsl(140 20% 95%) !important;
-  --color-fd-card: hsl(160 28% 7%) !important;
+  --color-fd-card: hsl(160 35% 6%) !important;
   --color-fd-card-foreground: hsl(140 20% 95%) !important;
   --color-fd-border: hsl(160 20% 18%) !important;
-  --color-fd-secondary: hsl(160 25% 15%) !important;
+  --color-fd-secondary: hsl(155 22% 18%) !important;
   --color-fd-secondary-foreground: hsl(140 20% 95%) !important;
-  --color-fd-accent: hsl(155 30% 14%) !important;
+  --color-fd-accent: hsl(150 22% 14%) !important;
   --color-fd-accent-foreground: hsl(140 20% 95%) !important;
   --color-fd-ring: hsl(155 40% 50%) !important;
 
@@ -205,20 +205,23 @@ body {
   --foreground: hsl(140 20% 95%);
   --primary: hsl(155 55% 48%);
   --primary-foreground: hsl(160 30% 5%);
-  --secondary: hsl(160 25% 15%);
+  --secondary: hsl(155 22% 18%);
   --secondary-foreground: hsl(140 20% 95%);
-  --muted: hsl(160 25% 12%);
+  /* Muted: Lighter sage green for section backgrounds (like Pricing/FAQ) */
+  --muted: hsl(155 25% 16%);
   --muted-foreground: hsl(145 15% 60%);
-  --accent: hsl(155 30% 14%);
+  /* Accent: Slightly warmer green for alternating sections */
+  --accent: hsl(150 22% 14%);
   --accent-foreground: hsl(140 20% 95%);
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(0 0% 98%);
   --border: hsl(160 20% 18%);
   --input: hsl(160 20% 18%);
   --ring: hsl(155 40% 50%);
-  --card: hsl(160 28% 7%);
+  /* Card: Dark background for cards within colored sections */
+  --card: hsl(160 35% 6%);
   --card-foreground: hsl(140 20% 95%);
-  --popover: hsl(160 28% 7%);
+  --popover: hsl(160 35% 6%);
   --popover-foreground: hsl(140 20% 95%);
 }
 

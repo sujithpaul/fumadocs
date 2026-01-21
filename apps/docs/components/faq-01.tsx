@@ -43,7 +43,7 @@ const faq = [
 
 export default function Faq01() {
   return (
-    <section className="py-20 px-6 bg-muted/50">
+    <section className="py-20 px-6 bg-muted">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-xl mx-auto">
           <h2 className="text-center text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-[-0.035em]">

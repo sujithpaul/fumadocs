@@ -70,7 +70,7 @@ const Pricing04 = () => {
 
   return (
     <TooltipProvider>
-      <div className="min-h-screen bg-accent flex flex-col items-center justify-center py-12 px-6">
+      <div className="min-h-screen bg-muted flex flex-col items-center justify-center py-12 px-6">
       <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
         Our Plans
       </h2>

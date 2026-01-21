@@ -58,7 +58,7 @@ const previewColors = [
 
 const Features05 = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-10 px-6">
+    <div className="min-h-screen flex items-center justify-center py-10 px-6 bg-muted">
       <div className="max-w-5xl w-full">
         <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
         Your entire workflow in one system. Across locations. 
