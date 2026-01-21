@@ -7,7 +7,7 @@ import HeroImage from "@/public/hero-image.png";
 
 export default function Hero03() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col gap-16 items-center justify-center px-6 py-16 overflow-hidden">
+    <div className="relative min-h-screen w-full flex flex-col gap-16 items-center justify-center px-6 py-16 overflow-hidden -mt-8 sm:-mt-12">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

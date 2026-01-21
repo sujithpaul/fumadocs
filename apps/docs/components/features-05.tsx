@@ -47,6 +47,15 @@ const features = [
   },
 ];
 
+const previewColors = [
+  "bg-gradient-to-br from-emerald-500/70 via-emerald-400/60 to-emerald-500/80",
+  "bg-gradient-to-br from-indigo-500/70 via-sky-500/60 to-indigo-500/80",
+  "bg-gradient-to-br from-amber-500/70 via-orange-400/60 to-amber-500/80",
+  "bg-gradient-to-br from-pink-500/70 via-rose-400/60 to-pink-500/80",
+  "bg-gradient-to-br from-cyan-500/70 via-teal-400/60 to-cyan-500/80",
+  "bg-gradient-to-br from-purple-500/70 via-violet-400/60 to-purple-500/80",
+];
+
 const Features05 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center py-10 px-6">
@@ -55,7 +64,7 @@ const Features05 = () => {
         One connected platform that brings your entire practice management together. 
         </h2>
         <div className="mt-10 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
-          {features.map((feature) => (
+          {features.map((feature, index) => (
             <Card
               key={feature.title}
               className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0"
@@ -70,7 +79,9 @@ const Features05 = () => {
                 </p>
               </CardHeader>
               <CardContent className="mt-auto px-0 pb-0">
-                <div className="bg-muted h-40 ml-6 rounded-tl-xl" />
+                <div
+                  className={`h-40 ml-6 rounded-tl-xl ${previewColors[index % previewColors.length]}`}
+                />
               </CardContent>
             </Card>
           ))}

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import Hero03 from '@/components/hero-03';
 import Features02 from '@/components/features-02';
+import AiWorkflow from '@/components/ai-workflow';
 import Features05 from '@/components/features-05';
 import Features04 from '@/components/features-04';
 import Pricing04 from '@/components/pricing-04';
@@ -36,6 +37,9 @@ export default async function MarketingPage({
 
       {/* Features Section */}
       <Features02 />
+
+      {/* AI Workflow Highlight */}
+      <AiWorkflow />
 
       {/* Features 05 Section */}
       <Features05 />
@@ -97,43 +101,6 @@ export default async function MarketingPage({
               icon={<Shield className="w-6 h-6" />}
               title="Smart Permissions"
               description="Control who sees what. Give therapists access to only their department, or let supervisors see everything."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Journey Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4">
-              The Journey
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-              From first visit to lasting outcomes
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <Step
-              number="1"
-              title="Seamless Onboarding"
-              description="New clients start with a smooth digital intake. All information flows directly into their profile."
-            />
-            <Step
-              number="2"
-              title="Comprehensive Assessment"
-              description="Choose from your assessment library. Complete evaluations on any device. Results sync automatically."
-            />
-            <Step
-              number="3"
-              title="Personalized Goals"
-              description="Set clear, measurable goals tailored to each client. Track progress with every session."
-            />
-            <Step
-              number="4"
-              title="Visible Progress"
-              description="Generate beautiful reports that show real outcomes. Share wins with families and stakeholders."
             />
           </div>
         </div>
@@ -279,26 +246,6 @@ function FeatureCard({
         <p className="text-sm text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
-  );
-}
-
-function Step({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold mb-4">
-        {number}
-      </div>
-      <h3 className="text-base font-semibold mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
   );
 }
 
