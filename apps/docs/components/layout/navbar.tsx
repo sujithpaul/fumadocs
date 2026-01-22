@@ -12,6 +12,9 @@ import Link from 'fumadocs-core/link';
 import Image from 'next/image';
 import Preview from '@/public/banner.png';
 import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/cn';
+import { useEffect } from 'react';
 
 interface NavbarProps {
   lang: string;
@@ -19,42 +22,37 @@ interface NavbarProps {
    * Hide navbar on mobile (for docs pages where DocsLayout handles mobile)
    */
   hideOnMobile?: boolean;
+  children?: React.ReactNode;
 }
 
-function getNavbarLinks(lang: string) {
-  return [
-    {
-      type: 'link' as const,
-      on: 'nav' as const,
-      text: 'Home',
-      url: `/${lang}`,
-    },
-    {
-      type: 'menu' as const,
-      on: 'menu' as const,
-      text: 'Help Docs',
-      items: [
-        {
-          text: 'Getting Started',
-          url: `/${lang}/docs`,
-          icon: <Book />,
-        },
-        {
-          text: 'Components',
-          url: `/${lang}/docs/ui/components`,
-          icon: <ComponentIcon />,
-        },
-      ],
-    },
-    {
-      type: 'custom' as const,
-      on: 'nav' as const,
-      children: (
-        <NavbarMenu>
-          <NavbarMenuTrigger>
-            <Link href={`/${lang}/docs`}>Help Docs</Link>
-          </NavbarMenuTrigger>
-          <NavbarMenuContent>
+function HelpDocsMenu({ lang }: { lang: string }) {
+  const pathname = usePathname();
+  const docsPath = `/${lang}/docs`;
+  const isActive = pathname?.startsWith(docsPath) ?? false;
+
+  // Add data attribute to body when on docs pages to help with CSS targeting
+  useEffect(() => {
+    if (isActive) {
+      document.body.setAttribute('data-docs-active', 'true');
+    } else {
+      document.body.removeAttribute('data-docs-active');
+    }
+  }, [isActive]);
+
+  return (
+    <NavbarMenu>
+      <NavbarMenuTrigger>
+        <Link
+          href={docsPath}
+          className={cn(
+            isActive && 'text-foreground font-medium'
+          )}
+          data-active={isActive ? 'true' : undefined}
+        >
+          Docs
+        </Link>
+      </NavbarMenuTrigger>
+      <NavbarMenuContent>
             <NavbarMenuLink href={`/${lang}/docs`} className="md:row-span-2">
               <div className="-mx-3 -mt-3">
                 <Image
@@ -108,7 +106,39 @@ function getNavbarLinks(lang: string) {
             </NavbarMenuLink>
           </NavbarMenuContent>
         </NavbarMenu>
-      ),
+  );
+}
+
+function getNavbarLinks(lang: string) {
+  return [
+    {
+      type: 'link' as const,
+      on: 'nav' as const,
+      text: 'Home',
+      url: `/${lang}`,
+      active: 'url' as const,
+    },
+    {
+      type: 'menu' as const,
+      on: 'menu' as const,
+      text: 'Docs',
+      items: [
+        {
+          text: 'Getting Started',
+          url: `/${lang}/docs`,
+          icon: <Book />,
+        },
+        {
+          text: 'Components',
+          url: `/${lang}/docs/ui/components`,
+          icon: <ComponentIcon />,
+        },
+      ],
+    },
+    {
+      type: 'custom' as const,
+      on: 'nav' as const,
+      children: <HelpDocsMenu lang={lang} />,
     },
     ...linkItems.map((item) => ({
       ...item,
@@ -117,13 +147,15 @@ function getNavbarLinks(lang: string) {
   ];
 }
 
-export function Navbar({ lang, hideOnMobile = false }: NavbarProps) {
+export function Navbar({ lang, hideOnMobile = false, children }: NavbarProps) {
   return (
     <HomeLayout
       {...baseOptions()}
       links={getNavbarLinks(lang)}
-      className={`!flex-none dark:bg-background [--color-fd-primary:var(--color-brand)] ${hideOnMobile ? 'max-md:hidden' : ''}`}
-    />
+      className={`dark:bg-background [--color-fd-primary:var(--color-brand)] ${hideOnMobile ? 'max-md:hidden' : ''}`}
+    >
+      {children}
+    </HomeLayout>
   );
 }
 

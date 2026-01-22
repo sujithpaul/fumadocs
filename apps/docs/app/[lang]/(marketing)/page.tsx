@@ -151,7 +151,7 @@ export default async function MarketingPage({
 
       {/* Insights Section */}
       <section className="py-20 px-6 bg-muted">
-        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
             <div className="max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">
@@ -324,7 +324,7 @@ export default async function MarketingPage({
 
       {/* Customization Section */}
       <section className="py-20 px-6 bg-muted">
-        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
             <div className="max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">
@@ -486,7 +486,7 @@ export default async function MarketingPage({
 
       {/* Specialized Section */}
       <section className="py-20 px-6 bg-muted">
-        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
           <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
             <div className="max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">
@@ -559,7 +559,7 @@ export default async function MarketingPage({
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Join 200+ therapy practices that have made the switch.
-            See Metanoa in action with a personalized demo.
+            
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="rounded-full text-base" asChild>

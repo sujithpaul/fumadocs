@@ -174,6 +174,96 @@ body {
   border-bottom: none !important;
 }
 
+/* Make navbar menu items white in dark mode */
+.dark #nd-home-layout header#nd-nav nav a,
+.dark #nd-home-layout header#nd-nav nav button {
+  color: white !important;
+}
+
+/* Prevent Home link from being active when on docs pages */
+/* When body has data-docs-active attribute, ensure Home link is not active */
+body[data-docs-active="true"] #nd-home-layout header#nd-nav nav a[href$="/en"]:not([href*="/docs"]) {
+  color: var(--color-fd-muted-foreground) !important;
+  font-weight: normal !important;
+  opacity: 0.7 !important;
+}
+
+/* Also target when Help Docs link has data-active */
+#nd-home-layout header#nd-nav nav a[href*="/docs"][data-active="true"] ~ * a[href$="/en"],
+#nd-home-layout header#nd-nav nav button:has(a[href*="/docs"][data-active="true"]) ~ * a[href$="/en"] {
+  color: var(--color-fd-muted-foreground) !important;
+  font-weight: normal !important;
+  opacity: 0.7 !important;
+}
+
+/* Prevent layout shifts from NavbarMenu opening/closing */
+#nd-home-layout header#nd-nav [data-radix-popper-content-wrapper] {
+  position: absolute !important;
+  z-index: 50;
+  pointer-events: none;
+}
+
+#nd-home-layout header#nd-nav [data-radix-popper-content-wrapper][data-state="open"] {
+  pointer-events: auto;
+}
+
+/* Ensure NavbarMenu closes immediately when clicking other links to prevent jumps */
+#nd-home-layout header#nd-nav nav a:not([href*="/docs"]):hover ~ * [data-radix-popper-content-wrapper],
+#nd-home-layout header#nd-nav nav a:not([href*="/docs"]):focus ~ * [data-radix-popper-content-wrapper] {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-out;
+}
+
+/* Ensure NavbarMenu doesn't cause jumps when opening/closing */
+#nd-home-layout header#nd-nav nav {
+  contain: layout;
+}
+
+/* Close menu immediately when clicking outside or on other links */
+#nd-home-layout header#nd-nav nav a[href*="/blog"],
+#nd-home-layout header#nd-nav nav a[href*="/showcase"],
+#nd-home-layout header#nd-nav nav a[href*="/sponsors"],
+#nd-home-layout header#nd-nav nav a[href$="/en"] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure consistent navbar height and width to prevent layout shifts during navigation */
+#nd-home-layout header#nd-nav {
+  min-height: 64px;
+  /* Lock navbar to full viewport width to prevent shift from scrollbar or sidebar */
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Ensure navbar content stays in consistent position */
+#nd-home-layout header#nd-nav > nav,
+#nd-home-layout header#nd-nav nav {
+  max-width: var(--spacing-page, 1400px);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Prevent the NavbarMenu dropdown from affecting layout during route transitions */
+#nd-home-layout [data-radix-navigation-menu-viewport] {
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+#nd-home-layout [data-radix-navigation-menu-viewport][data-state="open"] {
+  pointer-events: auto;
+}
+
+/* Hide menu immediately during navigation */
+#nd-home-layout [data-radix-navigation-menu-viewport][data-state="closed"] {
+  display: none !important;
+}
+
 .dark {
   /* CareStack-inspired sage/teal dark theme */
   /* Primary buttons: bright teal on dark */
@@ -233,6 +323,59 @@ body {
   --color-fd-primary-foreground: hsl(160 30% 5%);
 }
 
+/* Change active sidebar item vertical line from black to grey */
+#nd-docs-layout aside a[data-active="true"],
+#nd-docs-layout aside a[aria-current="page"],
+#nd-docs-layout aside [data-active="true"],
+#nd-docs-layout aside nav a[data-active="true"],
+#nd-docs-layout aside nav a[aria-current="page"] {
+  border-left-color: var(--color-fd-muted-foreground) !important;
+}
+
+/* Also target the pseudo-element if used */
+#nd-docs-layout aside a[data-active="true"]::before,
+#nd-docs-layout aside a[aria-current="page"]::before,
+#nd-docs-layout aside nav a[data-active="true"]::before,
+#nd-docs-layout aside nav a[aria-current="page"]::before {
+  background-color: var(--color-fd-muted-foreground) !important;
+  border-color: var(--color-fd-muted-foreground) !important;
+}
+
+/* Target any element with border-left that's active in sidebar */
+#nd-docs-layout aside [data-active="true"][style*="border-left"],
+#nd-docs-layout aside a[data-active="true"][style*="border-left"] {
+  border-left-color: var(--color-fd-muted-foreground) !important;
+}
+
+/* Change sidebar border-e (right border) to match navbar border color */
+aside.border-e,
+aside[class*="border-e"],
+#nd-docs-layout aside.border-e,
+#nd-docs-layout aside[class*="border-e"],
+#nd-docs-layout aside .border-e,
+#nd-docs-layout aside [class*="border-e"] {
+  border-inline-end-color: var(--color-fd-border) !important;
+  border-right-color: var(--color-fd-border) !important;
+  border-color: var(--color-fd-border) !important;
+}
+
+/* Target the specific sidebar container with border-e class */
+aside.absolute.flex.flex-col.border-e,
+aside[class*="absolute"][class*="flex"][class*="border-e"],
+#nd-docs-layout aside.flex.flex-col.border-e,
+#nd-docs-layout aside[class*="absolute"][class*="border-e"] {
+  border-inline-end-color: var(--color-fd-border) !important;
+  border-right-color: var(--color-fd-border) !important;
+  border-color: var(--color-fd-border) !important;
+}
+
+/* More aggressive override for sidebar borders */
+aside[class*="border-e"][class*="bg-fd-card"] {
+  border-inline-end-color: var(--color-fd-border) !important;
+  border-right-color: var(--color-fd-border) !important;
+  border-color: var(--color-fd-border) !important;
+}
+
 @keyframes circuit_1 {
   0% {
     transform: translateY(-20px);
@@ -256,5 +399,37 @@ body {
   100% {
     opacity: 0;
     transform: translateX(212px);
+  }
+}
+
+/* Hero animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes scrollDown {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(8px);
   }
 }

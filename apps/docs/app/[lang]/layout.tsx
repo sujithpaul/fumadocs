@@ -8,6 +8,7 @@ import { NextProvider } from 'fumadocs-core/framework/next';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import { defineI18nUI } from 'fumadocs-ui/i18n';
 import { i18n } from '@/lib/i18n';
+import { Navbar } from '@/components/layout/navbar';
 
 export const metadata = createMetadata({
   title: {
@@ -66,7 +67,9 @@ export default async function Layout({
             storageKey: 'fumadocs-theme',
           }}
         >
-          <Provider>{children}</Provider>
+          <Navbar lang={lang}>
+            <Provider>{children}</Provider>
+          </Navbar>
         </RootProvider>
       </TreeContextProvider>
     </NextProvider>

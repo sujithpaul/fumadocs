@@ -31,8 +31,8 @@ const overlays = [
 // Per-card image tuning to make the subjects feel similarly framed.
 // We use CSS vars so base scale + hover scale don't fight each other.
 const imageTweaks = [
-  // Owners photo reads more "zoomed out" — zoom in slightly more and bias upward
-  { scale: 1.425, hoverScale: 1.475, objectPosition: "50% 10%" },
+  // Owners
+  { scale: 1.12, hoverScale: 1.16, objectPosition: "50% 35%" },
   // Therapists
   { scale: 1.12, hoverScale: 1.16, objectPosition: "50% 35%" },
   // Administrators
@@ -79,7 +79,7 @@ const Features02 = () => {
         <div className="relative p-8 sm:p-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-[2.4rem] md:leading-[1.25] font-semibold tracking-tight text-balance mb-4">
-              Unified Platform for Behavioral Health Organizations, Group Practices and Solo Practitioners.
+              For Behavioral Health Organizations, Group Practices and Solo Practitioners.
             </h2>
           </div>
 

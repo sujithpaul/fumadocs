@@ -3,7 +3,7 @@ import { Sparkles, FileText, ClipboardList, Timer } from "lucide-react";
 export default function AiWorkflow() {
   return (
     <section className="py-20 px-6 bg-muted">
-      <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
+      <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-black text-white relative">
         <div className="relative grid md:grid-cols-2 gap-10 md:gap-16 p-8 sm:p-12">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-white/80">

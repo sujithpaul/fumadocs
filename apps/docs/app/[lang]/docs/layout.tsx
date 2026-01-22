@@ -4,7 +4,6 @@ import { source } from '@/lib/source';
 import { AISearch, AISearchPanel, AISearchTrigger } from '@/components/ai/search';
 import 'katex/dist/katex.min.css';
 import { getSection } from '@/lib/source/navigation';
-import { Navbar } from '@/components/layout/navbar';
 
 export default async function Layout({
   params,
@@ -14,9 +13,7 @@ export default async function Layout({
   const base = baseOptions();
 
   return (
-    <>
-      <Navbar lang={lang} hideOnMobile />
-      <DocsLayout
+    <DocsLayout
       {...base}
       tree={source.getPageTree(lang)}
       // All links for mobile sidebar, icon items shown in sidebar footer
@@ -68,6 +65,5 @@ export default async function Layout({
         <AISearchTrigger />
       </AISearch>
     </DocsLayout>
-    </>
   );
 }

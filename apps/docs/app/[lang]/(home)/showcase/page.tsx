@@ -354,7 +354,7 @@ export default function Showcase() {
                 className={cn(
                   buttonVariants({
                     variant: 'link',
-                    size: 'xs',
+                    size: 'sm',
                     className: 'text-brand',
                   }),
                 )}

@@ -70,32 +70,33 @@ const Pricing04 = () => {
 
   return (
     <TooltipProvider>
-      <div className="min-h-screen bg-muted flex flex-col items-center justify-center py-12 px-6">
-      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
-        Our Plans
-      </h2>
+      <section className="py-20 px-6 bg-muted">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+            Our Plans
+          </h2>
 
-      <Tabs
-        value={selectedBillingPeriod}
-        onValueChange={setSelectedBillingPeriod}
-        className="mt-8"
-      >
-        <TabsList className="h-11 bg-background border rounded-full p-1">
-          <TabsTrigger
-            value="monthly"
-            className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          <Tabs
+            value={selectedBillingPeriod}
+            onValueChange={setSelectedBillingPeriod}
+            className="mt-8 flex justify-center"
           >
-            Monthly
-          </TabsTrigger>
-          <TabsTrigger
-            value="yearly"
-            className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-          >
-            Yearly (Save {YEARLY_DISCOUNT}%)
-          </TabsTrigger>
-        </TabsList>
-      </Tabs>
-      <div className="mt-12 sm:mt-16 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
+            <TabsList className="h-11 bg-background border rounded-full p-1">
+              <TabsTrigger
+                value="monthly"
+                className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                Monthly
+              </TabsTrigger>
+              <TabsTrigger
+                value="yearly"
+                className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                Yearly (Save {YEARLY_DISCOUNT}%)
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+          <div className="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -150,8 +151,9 @@ const Pricing04 = () => {
             </ul>
           </div>
         ))}
-      </div>
-    </div>
+          </div>
+        </div>
+      </section>
     </TooltipProvider>
   );
 };
