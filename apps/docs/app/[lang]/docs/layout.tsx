@@ -22,9 +22,8 @@ export default async function Layout({
         enabled: true,
         // Logo only visible on mobile header (hidden on desktop via CSS)
         title: (
-          <span className="md:hidden flex items-center gap-2.5">
+          <span className="md:hidden flex items-center">
             {logo}
-            <span className="font-medium">Fumadocs</span>
           </span>
         ),
       }}

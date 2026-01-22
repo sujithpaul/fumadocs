@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
 import { FumadocsIcon } from '@/app/layout.client';
 import Logo from '@/public/logo.png';
+import MetanoaLogo from '@/components/logo-metanoa-transparant.png';
 
 export const linkItems: LinkItemType[] = [
   {
@@ -39,14 +40,20 @@ export const linkItems: LinkItemType[] = [
 export const logo = (
   <>
     <Image
-      alt="Fumadocs"
-      src={Logo}
+      alt="Metanoa"
+      src={MetanoaLogo}
       sizes="100px"
-      className="hidden w-22 in-[.uwu]:block"
-      aria-label="Fumadocs"
+      className="hidden h-12 w-auto in-[.uwu]:block object-contain"
+      aria-label="Metanoa"
     />
 
-    <FumadocsIcon className="size-5 in-[.uwu]:hidden" />
+    <Image
+      alt="Metanoa"
+      src={MetanoaLogo}
+      sizes="100px"
+      className="h-7 w-auto in-[.uwu]:hidden object-contain"
+      aria-label="Metanoa"
+    />
   </>
 );
 
@@ -56,7 +63,6 @@ export function baseOptions(): BaseLayoutProps {
       title: (
         <>
           {logo}
-          <span className="font-medium in-[.uwu]:hidden">Fumadocs</span>
         </>
       ),
     },
