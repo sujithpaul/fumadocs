@@ -24,28 +24,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const path = window.location.pathname;
-                const isHome = path === '/' || path === '/en' || path.match(/^\/[a-z]{2}$/);
+                var path = window.location.pathname;
+                var isHome = path === '/' || /^\\/[a-z]{2}$/.test(path);
+                var storageKey = 'fumadocs-theme';
+                var userPrefKey = 'user-theme-preference';
 
-                // Force dark mode for homepage routes (/en or /)
                 if (isHome) {
+                  // Home page: always dark
                   document.documentElement.classList.remove('light');
                   document.documentElement.classList.add('dark');
-                  try { sessionStorage.setItem('__forced_home_dark__', '1'); } catch (e) {}
                   return;
                 }
 
-                // If we previously visited the forced-dark homepage in this session,
-                // reset back to light before hydration to avoid a dark flash.
+                // Non-home page: restore user preference or default to light
                 try {
-                  if (sessionStorage.getItem('__forced_home_dark__') === '1') {
-                    sessionStorage.removeItem('__forced_home_dark__');
-                    localStorage.setItem('theme', 'light');
-                    localStorage.setItem('fumadocs-theme', 'light');
-                    document.documentElement.classList.remove('dark');
-                    document.documentElement.classList.add('light');
-                  }
-                } catch (e) {}
+                  var savedPref = sessionStorage.getItem(userPrefKey);
+                  var theme = savedPref || localStorage.getItem(storageKey) || 'light';
+                  document.documentElement.classList.remove('dark', 'light');
+                  document.documentElement.classList.add(theme);
+                } catch (e) {
+                  document.documentElement.classList.add('light');
+                }
               })();
             `,
           }}

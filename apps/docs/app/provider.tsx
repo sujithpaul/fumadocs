@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
@@ -30,41 +30,53 @@ export const searchConfig = {
   SearchDialog,
 };
 
-const HOME_SESSION_FLAG = '__forced_home_dark__';
+const USER_PREF_KEY = 'user-theme-preference';
+const THEME_STORAGE_KEY = 'fumadocs-theme';
 
-function ThemeRouteSync() {
+function isHomePage(pathname: string): boolean {
+  return pathname === '/' || /^\/[a-z]{2}$/.test(pathname);
+}
+
+/**
+ * Unified theme controller that handles route-based theme switching.
+ * - Home page: always dark, no user choice
+ * - Other pages: user preference (defaults to light)
+ */
+function ThemeController() {
   const pathname = usePathname();
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    const isHome =
-      pathname === '/' ||
-      /^\/[a-z]{2}$/.test(pathname); // e.g. /en
+  useLayoutEffect(() => {
+    const isHome = isHomePage(pathname);
 
     if (isHome) {
-      // Mark that we've been on the forced-dark homepage this session.
-      sessionStorage.setItem(HOME_SESSION_FLAG, '1');
-      return;
-    }
-
-    // If we came from the homepage (forced dark), reset to light once.
-    if (sessionStorage.getItem(HOME_SESSION_FLAG) === '1') {
-      sessionStorage.removeItem(HOME_SESSION_FLAG);
-
-      // Make non-home pages default back to light.
-      setTheme('light');
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-
-      // Normalize common theme keys that may have been set to dark.
+      // Save user's current preference before forcing dark (if not already dark)
+      if (theme && theme !== 'dark') {
+        try {
+          sessionStorage.setItem(USER_PREF_KEY, theme);
+        } catch {
+          // ignore
+        }
+      }
+      // Force dark mode on home
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      setTheme('dark');
+    } else {
+      // Non-home page: restore user preference if we saved one
       try {
-        localStorage.setItem('theme', 'light');
-        localStorage.setItem('fumadocs-theme', 'light');
+        const savedPref = sessionStorage.getItem(USER_PREF_KEY);
+        if (savedPref) {
+          sessionStorage.removeItem(USER_PREF_KEY);
+          document.documentElement.classList.remove('dark', 'light');
+          document.documentElement.classList.add(savedPref);
+          setTheme(savedPref);
+        }
       } catch {
         // ignore
       }
     }
-  }, [pathname, setTheme]);
+  }, [pathname, theme, setTheme]);
 
   return null;
 }
@@ -73,8 +85,10 @@ export function Provider({ children }: { children: ReactNode }) {
   return (
     <TooltipProvider>
       <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: inject }} />
-      <ThemeRouteSync />
+      <ThemeController />
       {children}
     </TooltipProvider>
   );
 }
+
+export { isHomePage };

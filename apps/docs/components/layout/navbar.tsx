@@ -15,6 +15,7 @@ import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/cn';
 import { useEffect } from 'react';
+import { isHomePage } from '@/app/provider';
 
 interface NavbarProps {
   lang: string;
@@ -148,10 +149,14 @@ function getNavbarLinks(lang: string) {
 }
 
 export function Navbar({ lang, hideOnMobile = false, children }: NavbarProps) {
+  const pathname = usePathname();
+  const isHome = isHomePage(pathname);
+
   return (
     <HomeLayout
       {...baseOptions()}
       links={getNavbarLinks(lang)}
+      themeSwitch={{ enabled: !isHome }}
       className={`dark:bg-background [--color-fd-primary:var(--color-brand)] ${hideOnMobile ? 'max-md:hidden' : ''}`}
     >
       {children}
