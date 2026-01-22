@@ -109,6 +109,8 @@ export const blog = defineCollections({
   schema: frontmatterSchema.extend({
     author: z.string(),
     date: z.iso.date().or(z.date()),
+    category: z.string().optional(),
+    image: z.string().optional(),
   }),
   async: true,
   async mdxOptions(environment) {

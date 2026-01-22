@@ -1,4 +1,4 @@
-import { AlbumIcon, Heart, LayoutTemplate } from 'lucide-react';
+import { AlbumIcon, LayoutTemplate } from 'lucide-react';
 import Image from 'next/image';
 import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
 import { FumadocsIcon } from '@/app/layout.client';
@@ -17,11 +17,6 @@ export const linkItems: LinkItemType[] = [
     url: '/showcase',
     icon: <LayoutTemplate />,
     active: 'url',
-  },
-  {
-    text: 'Sponsors',
-    url: '/sponsors',
-    icon: <Heart />,
   },
   {
     type: 'icon',
