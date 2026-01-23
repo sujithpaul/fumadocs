@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -18,6 +19,8 @@ import {
   Users,
   CreditCard,
 } from 'lucide-react';
+import InsightsImage from '@/public/insights.png';
+import YourFormatsImage from '@/public/your-formats.png';
 import Hero03 from '@/components/hero-03';
 import Features02 from '@/components/features-02';
 import AiWorkflow from '@/components/ai-workflow';
@@ -214,8 +217,15 @@ export default async function MarketingPage({
               </dl>
             </div>
 
-            {/* Right side with gradient background */}
-            <div className="hidden md:block bg-gradient-to-br from-blue-500/20 via-cyan-500/15 to-teal-500/20 rounded-xl" />
+            {/* Right side with Insights image */}
+            <div className="hidden md:block relative rounded-xl overflow-hidden">
+              <Image
+                src={InsightsImage}
+                alt="Practice insights dashboard"
+                className="w-full h-full object-cover"
+                quality={90}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -380,8 +390,15 @@ export default async function MarketingPage({
               </dl>
             </div>
 
-            {/* Right side with gradient background */}
-            <div className="hidden md:block bg-gradient-to-br from-amber-500/20 via-orange-500/15 to-red-500/20 rounded-xl" />
+            {/* Right side with Your Formats image */}
+            <div className="hidden md:block relative rounded-xl overflow-hidden">
+              <Image
+                src={YourFormatsImage}
+                alt="Customizable formats and processes"
+                className="w-full h-full object-cover"
+                quality={90}
+              />
+            </div>
           </div>
         </div>
       </section>

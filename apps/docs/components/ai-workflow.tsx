@@ -1,4 +1,6 @@
 import { Sparkles, FileText, ClipboardList, Timer } from "lucide-react";
+import Image from "next/image";
+import AiAssistantImage from "@/public/ai-assistant.png";
 
 export default function AiWorkflow() {
   return (
@@ -57,8 +59,15 @@ export default function AiWorkflow() {
             </dl>
           </div>
 
-          {/* Right side with gradient background */}
-          <div className="hidden md:block bg-gradient-to-br from-indigo-500/20 via-purple-500/15 to-pink-500/20 rounded-xl" />
+          {/* Right side with AI Assistant image */}
+          <div className="hidden md:block relative rounded-xl overflow-hidden">
+            <Image
+              src={AiAssistantImage}
+              alt="AI Assistant"
+              className="w-full h-full object-cover"
+              quality={90}
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Image from "next/image";
 import {
   Building2,
   ShieldCheck,
@@ -7,6 +8,11 @@ import {
   ClipboardList,
   Target,
 } from "lucide-react";
+import SmartSchedulingImage from "@/scripts/smart-scheduling.png";
+import MultiLocationImage from "@/scripts/multi-location-management.png";
+import RolesPermissionsImage from "@/scripts/roles-permissions.png";
+import RealTimeAnalyticsImage from "@/scripts/real-time-analytics.png";
+import GoalsSessionsImage from "@/scripts/goals_sessions.png";
 
 const features = [
   {
@@ -79,9 +85,61 @@ const Features05 = () => {
                 </p>
               </CardHeader>
               <CardContent className="mt-auto px-0 pb-0">
-                <div
-                  className={`h-40 ml-6 rounded-tl-xl ${previewColors[index % previewColors.length]}`}
-                />
+                {feature.title === "Smart Scheduling" ? (
+                  <div className="h-40 ml-6 rounded-tl-xl relative overflow-hidden">
+                    <Image
+                      src={SmartSchedulingImage}
+                      alt="Smart Scheduling"
+                      fill
+                      className="object-cover"
+                      quality={90}
+                    />
+                  </div>
+                ) : feature.title === "Multi-Location Management" ? (
+                  <div className="h-40 ml-6 rounded-tl-xl relative overflow-hidden">
+                    <Image
+                      src={MultiLocationImage}
+                      alt="Multi-Location Management"
+                      fill
+                      className="object-cover"
+                      quality={90}
+                    />
+                  </div>
+                ) : feature.title === "Team Roles & Permissions" ? (
+                  <div className="h-40 ml-6 rounded-tl-xl relative overflow-hidden">
+                    <Image
+                      src={RolesPermissionsImage}
+                      alt="Team Roles & Permissions"
+                      fill
+                      className="object-cover"
+                      quality={90}
+                    />
+                  </div>
+                ) : feature.title === "Real-Time Analytics" ? (
+                  <div className="h-40 ml-6 rounded-tl-xl relative overflow-hidden">
+                    <Image
+                      src={RealTimeAnalyticsImage}
+                      alt="Real-Time Analytics"
+                      fill
+                      className="object-cover"
+                      quality={90}
+                    />
+                  </div>
+                 ) : feature.title === "Goals, Sessions & Reports" ? (
+                   <div className="h-40 ml-6 rounded-tl-xl relative overflow-hidden">
+                     <Image
+                       src={GoalsSessionsImage}
+                       alt="Goals, Sessions & Reports"
+                       fill
+                       className="object-cover object-top"
+                       quality={90}
+                     />
+                   </div>
+                 ) : (
+                  <div
+                    className={`h-40 ml-6 rounded-tl-xl ${previewColors[index % previewColors.length]}`}
+                  />
+                )}
               </CardContent>
             </Card>
           ))}
